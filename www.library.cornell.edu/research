@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://main1.test.library.cornell.edu/" />
+<title>research</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">research</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${homepage}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#block-block-2 &gt; h2</td>
+	<td>Research</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Ask a Librarian')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h1</td>
+	<td>Ask a Librarian</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Visit Us</td>
+	<td>Visit Us</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Chat 24/7</td>
+	<td>Chat 24/7</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Citation Management</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h1</td>
+	<td>Citation Management</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Code of Academic Integrity</td>
+	<td>Code of Academic Integrity</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=APA citation style</td>
+	<td>APA citation style</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=MLA citation style</td>
+	<td>MLA citation style</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Chicago Manual of Style online</td>
+	<td>Chicago Manual of Style online</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Annotated bibliography how-to</td>
+	<td>Annotated bibliography how-to</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='node-26']/div/div/div/div/h2[2]</td>
+	<td>Citation Management Software</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=RefWorks</td>
+	<td>RefWorks</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=EndNote</td>
+	<td>EndNote</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Zotero</td>
+	<td>Zotero</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Mendeley</td>
+	<td>Mendeley</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Comparison of Citation Management Software: RefWorks, EndNote, Zotero, Papers, Mendeley</td>
+	<td>Comparison of Citation Management Software: RefWorks, EndNote, Zotero, Papers, Mendeley</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Send us your citation management software question</td>
+	<td>Send us your citation management software question</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=ol.breadcrumb &gt; li.first &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Collections</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h1</td>
+	<td>Collections</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Contact List for Subject Librarians</td>
+	<td>Contact List for Subject Librarians</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Collection Policies by Subjects</td>
+	<td>Collection Policies by Subjects</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Request Form for Library Purchases</td>
+	<td>Request Form for Library Purchases</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Registry of Cornell Digital Library Collections</td>
+	<td>Registry of Cornell Digital Library Collections</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Division of Rare and Manuscript Collections</td>
+	<td>Division of Rare and Manuscript Collections</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Kheel Center for Labor-Management Documentation &amp; Archives</td>
+	<td>Kheel Center for Labor-Management Documentation &amp; Archives</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Albert R. Mann Library</td>
+	<td>Albert R. Mann Library</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Law Library</td>
+	<td>Law Library</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Online Exhibitions</td>
+	<td>Online Exhibitions</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Giving Opportunities</td>
+	<td>Giving Opportunities</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Current Awareness</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h1</td>
+	<td>Current Awareness</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=New Books at Cornell</td>
+	<td>New Books at Cornell</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Social Bookmarking</td>
+	<td>Social Bookmarking</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=JournalTOCs Tables of Contents</td>
+	<td>JournalTOCs Tables of Contents</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=EBSCO</td>
+	<td>EBSCO</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Problem Solved</td>
+	<td>Problem Solved</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=@ Olin &amp; Uris Libraries</td>
+	<td>@ Olin &amp; Uris Libraries</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Keeping Current with News and Research</td>
+	<td>Keeping Current with News and Research</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td></td>
+	<td>Cornell University Library</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Cornell University Library news</td>
+	<td>Cornell University Library news</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Connotea</td>
+	<td>Connotea</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=CiteULike</td>
+	<td>CiteULike</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=citation management</td>
+	<td>citation management</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Zotero</td>
+	<td>Zotero</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=ISI’s Web of Knowledge</td>
+	<td>ISI’s Web of Knowledge</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Creating Database Search Alerts</td>
+	<td>Creating Database Search Alerts</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=The Scout Report</td>
+	<td>The Scout Report</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Google Alerts</td>
+	<td>Google Alerts</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Atlas Conferences</td>
+	<td>Atlas Conferences</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Introduction to Research</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h1</td>
+	<td>Introduction to Research</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='node-25']/div/div/div/div/h3[4]</td>
+	<td>Finding background information</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='node-25']/div/div/div/div/h2[2]</td>
+	<td>Finding books, articles, and other materials</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=books, music, video and audio materials</td>
+	<td>books, music, video and audio materials</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=articles, databases, images</td>
+	<td>articles, databases, images</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=dissertations</td>
+	<td>dissertations</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Search Guide</td>
+	<td>Search Guide</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='node-25']/div/div/div/div/h2[3]</td>
+	<td>Evaluating resources</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='node-25']/div/div/div/div/p[22]/strong</td>
+	<td>Objective reasoning:</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='node-25']/div/div/div/div/h3[11]</td>
+	<td>Evaluating Web resources</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='node-25']/div/div/div/div/h4[9]</td>
+	<td>Sensational</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Annotated bibliography tutorial</td>
+	<td>Annotated bibliography tutorial</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Code of Academic Integrity</td>
+	<td>Code of Academic Integrity</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Research Consultation</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h1</td>
+	<td>Research Consultation</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=edit-submit</td>
+	<td>Submit</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td></td>
+	<td>exact:Describe your research topic and needs *</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=edit-submitted-library</td>
+	<td>- Select -Adelson Library (Lab of OrnithologyAfricana LibraryEngineering LibraryEntomology LibraryFine Arts LibraryGeneva LibraryHotel LibraryIndustrial &amp; Labor Relations LibraryKroch Library (Asia)Kroch Library (Division of Rare and Manuscript Collections)Management LibraryMann Library (Agriculture, Life Sciences and Selected Social Sciences)Mathematics LibraryMusic LibraryOlin Library (Humanities &amp; Social Sciences)Physical Sciences LibraryUris Library (Humanities &amp; Social Sciences)Veterinary LibraryWeill Cornell Medical Library (New York CityWeill Cornell Medical College-Qatar, Distributed eLibrary</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

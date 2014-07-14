@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://main1.test.library.cornell.edu/" />
+<title>main-menu</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">main-menu</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${homepage}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h2</td>
+	<td>Courses</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#block-block-2 &gt; h2</td>
+	<td>Research</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#block-block-3 &gt; h2</td>
+	<td>Services</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#block-block-4 &gt; h2</td>
+	<td>Help for</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.spotlight-label</td>
+	<td>Spotlight</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h1</td>
+	<td>Search</td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Cornell University Library</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=About Us</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Inside the Library</td>
+	<td>Inside the Library</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Collections</td>
+	<td>Collections</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Visitor Information</td>
+	<td>Visitor Information</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h1</td>
+	<td>About Us</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Courses</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#edit-description &gt; label</td>
+	<td>Search course help</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Library Guides</td>
+	<td>Library Guides</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=edit-submit</td>
+	<td>Search</td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${homepage}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Research</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h1</td>
+	<td>Research Help</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h2 &gt; a</td>
+	<td>Ask a Librarian</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Current Awareness</td>
+	<td>Current Awareness</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Library Guides</td>
+	<td>Library Guides</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Services</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h1</td>
+	<td>Services</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Borrow, Request, Renew, Return</td>
+	<td>Borrow, Request, Renew, Return</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Passkey and other tools</td>
+	<td>Passkey and other tools</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Copyright, Digitization and Publishing</td>
+	<td>Copyright, Digitization and Publishing</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Library Spaces</td>
+	<td>Library Spaces</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Workshops and Instruction</td>
+	<td>Workshops and Instruction</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Ask a Librarian</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h1</td>
+	<td>Ask a Librarian</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Visit Us</td>
+	<td>Visit Us</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=E-mail Us</td>
+	<td>E-mail Us</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=strong</td>
+	<td>For Cornell students, faculty, staff &amp; alumni only!</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Phone Us</td>
+	<td>Phone Us</td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://beta.test.library.cornell.edu/" />
+<title>help-for-details</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">help-for-details</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${homepage}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Alumni</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Alumni and Friends |</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertLocation</td>
+	<td>http://alumni.library.cornell.edu/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${homepage}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Faculty and Instructors</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Course reserves</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h1</td>
+	<td>How to Submit Course Reserves</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Check the FAQ for Instructors</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.field-item.even &gt; p</td>
+	<td>Frequently asked questions about course reserves at Cornell University Library.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Course Reserves</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Submit course reserves online</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h1</td>
+	<td>Submit Course Reserves Online</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Create a new reserves list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=p &gt; i</td>
+	<td>We are currently experiencing a technical issue with our &quot;Create Course&quot; web submission form and are working on a fix. In the meantime, please create your course reserves list using one of the two methods below:</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add reserve items to your course</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Edit reserve items or view their processing status</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${homepage}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Faculty and Instructors</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Course reserves</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${homepage}</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

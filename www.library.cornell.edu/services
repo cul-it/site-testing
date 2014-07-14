@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://main1.test.library.cornell.edu/" />
+<title>services</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">services</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${homepage}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#block-block-3 &gt; h2</td>
+	<td>Services</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Borrow, Request, Renew, Return</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h1</td>
+	<td>Borrow, Request, Renew, Return</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Copyright, Digitization and Publishing</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h1</td>
+	<td>Copyright, Digitization and Publishing</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Cornell Copyright Information Center</td>
+	<td>Cornell Copyright Information Center</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Copyright Management for Authors</td>
+	<td>Copyright Management for Authors</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='node-115']/div/div/div/div/h2[2]</td>
+	<td>Digitization and Digital Content Management</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Course Reserves</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h1</td>
+	<td>How to Submit Course Reserves</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Check the FAQ for Instructors</td>
+	<td>Check the FAQ for Instructors</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Library Liaison Program</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h1</td>
+	<td>Library Liaison Program</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Samuel Curtis Johnson Graduate School of Management</td>
+	<td>Samuel Curtis Johnson Graduate School of Management</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//section[@id='block-system-main']/h2[2]</td>
+	<td>Liaisons by Centers and Programs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Cornell Institute of Archaeology and Material Studies (CIAMS)</td>
+	<td>Cornell Institute of Archaeology and Material Studies (CIAMS)</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Feminist, Gender, and Sexuality Studies (FGSS)</td>
+	<td>Feminist, Gender, and Sexuality Studies (FGSS)</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Southeast Asia Program (SEAP)</td>
+	<td>Southeast Asia Program (SEAP)</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Library Spaces</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h1</td>
+	<td>Library Spaces</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Cafés</td>
+	<td>Cafés</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Meeting Rooms</td>
+	<td>Meeting Rooms</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Students</td>
+	<td>Students</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=OverDrive</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h1</td>
+	<td>OverDrive</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Connect to OverDrive</td>
+	<td>Connect to OverDrive</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='node-210']/div/div/div/div/h2[2]</td>
+	<td>Formats</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Recommend a Purchase</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Recommend a Purchase | Cornell University Library</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#webform-component-place-publisher--year-of-publication &gt; label</td>
+	<td>Place, publisher &amp; year of publication</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#webform-component-would-you-like-to-be-notified-when-this-item-is-cataloged &gt; label</td>
+	<td>exact:Would you like to be notified when this item is cataloged?</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=edit-submit</td>
+	<td>Submit</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Workshops and Instruction</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h1</td>
+	<td>Workshops and Instruction</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='node-72']/div/div/div/div/h2[2]</td>
+	<td>Learning Outcomes</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='node-72']/div/div/div/div/h2[3]</td>
+	<td>Instruction Sessions</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=filling out this form</td>
+	<td>filling out this form</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Geneva Experiment Station Library</td>
+	<td>Geneva Experiment Station Library</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Rare and Manuscript Collections</td>
+	<td>Rare and Manuscript Collections</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=ol.breadcrumb &gt; li.first &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${homepage}</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
