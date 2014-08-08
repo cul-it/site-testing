@@ -177,46 +177,6 @@
 	<td>Submit</td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>link=Workshops and Instruction</td>
-	<td></td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>css=h1</td>
-	<td>Workshops and Instruction</td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>//div[@id='node-72']/div/div/div/div/h2[2]</td>
-	<td>Learning Outcomes</td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>//div[@id='node-72']/div/div/div/div/h2[3]</td>
-	<td>Instruction Sessions</td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>link=filling out this form</td>
-	<td>filling out this form</td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>link=Geneva Experiment Station Library</td>
-	<td>Geneva Experiment Station Library</td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>link=Rare and Manuscript Collections</td>
-	<td>Rare and Manuscript Collections</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>css=ol.breadcrumb &gt; li.first &gt; a</td>
-	<td></td>
-</tr>
-<tr>
 	<td>open</td>
 	<td>${homepage}</td>
 	<td></td>

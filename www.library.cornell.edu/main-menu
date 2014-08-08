@@ -167,11 +167,6 @@
 	<td>Library Spaces</td>
 </tr>
 <tr>
-	<td>assertText</td>
-	<td>link=Workshops and Instruction</td>
-	<td>Workshops and Instruction</td>
-</tr>
-<tr>
 	<td>clickAndWait</td>
 	<td>link=Ask a Librarian</td>
 	<td></td>
