@@ -142,9 +142,14 @@
 	<td>Services</td>
 </tr>
 <tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
 	<td>assertText</td>
-	<td>link=Borrow, Request, Renew, Return</td>
-	<td>Borrow, Request, Renew, Return</td>
+	<td>link=Borrow, Renew, Return Policies</td>
+	<td>Borrow, Renew, Return Policies</td>
 </tr>
 <tr>
 	<td>assertText</td>
@@ -158,8 +163,8 @@
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>link=Copyright, Digitization and Publishing</td>
-	<td>Copyright, Digitization and Publishing</td>
+	<td>link=Copyright and Digitization</td>
+	<td>Copyright and Digitization</td>
 </tr>
 <tr>
 	<td>assertText</td>
