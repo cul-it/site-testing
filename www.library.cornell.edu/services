@@ -22,24 +22,44 @@
 	<td>Services</td>
 </tr>
 <tr>
+	<td>assertText</td>
+	<td>link=Borrow, Renew, Return Policies</td>
+	<td>Borrow, Renew, Return Policies</td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
-	<td>link=Borrow, Request, Renew, Return</td>
+	<td>link=Borrow, Renew, Return Policies</td>
 	<td></td>
 </tr>
 <tr>
 	<td>assertText</td>
 	<td>css=h1</td>
-	<td>Borrow, Request, Renew, Return</td>
+	<td>Borrow, Renew, Return Policies</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${homepage}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Copyright and Digitization</td>
+	<td>Copyright and Digitization</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Copyright, Digitization and Publishing</td>
+	<td>link=Copyright and Digitization</td>
 	<td></td>
 </tr>
 <tr>
 	<td>assertText</td>
 	<td>css=h1</td>
-	<td>Copyright, Digitization and Publishing</td>
+	<td>Copyright and Digitization</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h2</td>
+	<td>Copyright and Intellectual Property</td>
 </tr>
 <tr>
 	<td>assertText</td>
@@ -150,31 +170,6 @@
 	<td>assertText</td>
 	<td>//div[@id='node-210']/div/div/div/div/h2[2]</td>
 	<td>Formats</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>link=Recommend a Purchase</td>
-	<td></td>
-</tr>
-<tr>
-	<td>assertTitle</td>
-	<td>Recommend a Purchase | Cornell University Library</td>
-	<td></td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>css=#webform-component-place-publisher--year-of-publication &gt; label</td>
-	<td>Place, publisher &amp; year of publication</td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>css=#webform-component-would-you-like-to-be-notified-when-this-item-is-cataloged &gt; label</td>
-	<td>exact:Would you like to be notified when this item is cataloged?</td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>id=edit-submit</td>
-	<td>Submit</td>
 </tr>
 <tr>
 	<td>open</td>

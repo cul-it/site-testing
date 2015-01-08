@@ -78,8 +78,8 @@
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>link=Annotated bibliography how-to</td>
-	<td>Annotated bibliography how-to</td>
+	<td>link=Annotated Bibliography Tutorial</td>
+	<td>Annotated Bibliography Tutorial</td>
 </tr>
 <tr>
 	<td>assertText</td>
@@ -243,11 +243,6 @@
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>link=Connotea</td>
-	<td>Connotea</td>
-</tr>
-<tr>
-	<td>assertText</td>
 	<td>link=CiteULike</td>
 	<td>CiteULike</td>
 </tr>
@@ -280,11 +275,6 @@
 	<td>assertText</td>
 	<td>link=Google Alerts</td>
 	<td>Google Alerts</td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>link=Atlas Conferences</td>
-	<td>Atlas Conferences</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -335,11 +325,6 @@
 	<td>assertText</td>
 	<td>//div[@id='node-25']/div/div/div/div/h2[3]</td>
 	<td>Evaluating resources</td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>//div[@id='node-25']/div/div/div/div/p[22]/strong</td>
-	<td>Objective reasoning:</td>
 </tr>
 <tr>
 	<td>assertText</td>

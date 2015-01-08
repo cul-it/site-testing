@@ -22,78 +22,13 @@
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>link=Borrow, Request, Renew, Return</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>link=Columbia Library Borrowing Privileges (2CUL)</td>
-	<td></td>
+	<td>assertText</td>
+	<td>link=Borrow Direct, Interlibrary Loan (ILL) and Material Requests</td>
+	<td>Borrow Direct, Interlibrary Loan (ILL) and Material Requests</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Apply for a Columbia Library Card</td>
-	<td></td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>css=h1</td>
-	<td>CUWebLogin</td>
-</tr>
-<tr>
-	<td>assertTitle</td>
-	<td>Cornell University Web Login</td>
-	<td></td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>//div[@id='footer-content']/p[2]</td>
-	<td>exact:Caution: Always check your browser's address bar before you enter your NetID password to make sure the address starts with https://web*.login.cornell.edu/ (where web* is either web1, web2, web3 or web4).</td>
-</tr>
-<tr>
-	<td>waitForElementNotPresent</td>
-	<td>css=h1</td>
-	<td>CUWebLogin</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForPageToLoad</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>assertTitle</td>
-	<td>2CUL Columbia Library Patron Borrowing Application | Cornell University Library</td>
-	<td></td>
-</tr>
-<tr>
-	<td>selectWindow</td>
-	<td>null</td>
-	<td></td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>css=h1</td>
-	<td>2CUL Columbia Library Patron Borrowing Application</td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>id=edit-submit</td>
-	<td>Submit</td>
-</tr>
-<tr>
-	<td>assertCookiePresent</td>
-	<td>netid</td>
-	<td></td>
-</tr>
-<tr>
-	<td>assertCookiePresent</td>
-	<td>verify_netid</td>
+	<td>link=Borrow Direct, Interlibrary Loan (ILL) and Material Requests</td>
 	<td></td>
 </tr>
 <tr>

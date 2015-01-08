@@ -27,14 +27,14 @@
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>link=HADM 4300: Introduction to Wines</td>
+	<td>selectWindow</td>
+	<td>null</td>
 	<td></td>
 </tr>
 <tr>
-	<td>assertTextPresent</td>
-	<td></td>
-	<td>HADM 4300: Introduction to Wines</td>
+	<td>assertText</td>
+	<td>css=h2</td>
+	<td>Search result for 'Wine'</td>
 </tr>
 <tr>
 	<td>assertText</td>
@@ -62,14 +62,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>link=VTMED 6545: Sheep and Goat Medicine</td>
-	<td></td>
-</tr>
-<tr>
-	<td>assertTextPresent</td>
-	<td></td>
-	<td>VTMED 6545: Sheep and Goat Medicine</td>
+	<td>assertText</td>
+	<td>css=h2</td>
+	<td>Search result for 'sheep'</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
