@@ -87,11 +87,6 @@
 	<td></td>
 </tr>
 <tr>
-	<td>assertText</td>
-	<td>css=p &gt; i</td>
-	<td>We are currently experiencing a technical issue with our &quot;Create Course&quot; web submission form and are working on a fix. In the meantime, please create your course reserves list using one of the two methods below:</td>
-</tr>
-<tr>
 	<td>click</td>
 	<td>link=Add reserve items to your course</td>
 	<td></td>
