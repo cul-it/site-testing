@@ -147,9 +147,14 @@
 	<td>Request Form for Library Purchases</td>
 </tr>
 <tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
 	<td>assertText</td>
-	<td>link=Registry of Cornell Digital Library Collections</td>
-	<td>Registry of Cornell Digital Library Collections</td>
+	<td>link=Cornell Digital Collections</td>
+	<td>Cornell Digital Collections</td>
 </tr>
 <tr>
 	<td>assertText</td>
