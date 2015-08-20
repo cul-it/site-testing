@@ -22,8 +22,13 @@
 	<td></td>
 </tr>
 <tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
 	<td>assertText</td>
-	<td>css=h2</td>
+	<td>css=a &gt; h2</td>
 	<td>Africana Library</td>
 </tr>
 <tr>
@@ -151,7 +156,6 @@
 	<td>link=Home</td>
 	<td></td>
 </tr>
-
 </tbody></table>
 </body>
 </html>
