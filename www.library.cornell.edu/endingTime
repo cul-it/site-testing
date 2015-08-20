@@ -12,6 +12,11 @@
 <tr><td rowspan="1" colspan="3">endingTime</td></tr>
 </thead><tbody>
 <tr>
+	<td>open</td>
+	<td>${homepage}</td>
+	<td></td>
+</tr>
+<tr>
 	<td>storeEval</td>
 	<td>new Date().getTime();</td>
 	<td>endingTime</td>
