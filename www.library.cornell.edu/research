@@ -88,11 +88,6 @@
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>link=RefWorks</td>
-	<td>RefWorks</td>
-</tr>
-<tr>
-	<td>assertText</td>
 	<td>link=EndNote</td>
 	<td>EndNote</td>
 </tr>
@@ -108,8 +103,8 @@
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>link=Comparison of Citation Management Software: RefWorks, EndNote, Zotero, Papers, Mendeley</td>
-	<td>Comparison of Citation Management Software: RefWorks, EndNote, Zotero, Papers, Mendeley</td>
+	<td>link=Comparison of Citation Management Software: EndNote, Zotero, Papers, Mendeley</td>
+	<td>Comparison of Citation Management Software: EndNote, Zotero, Papers, Mendeley</td>
 </tr>
 <tr>
 	<td>assertText</td>
