@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://main1.test.library.cornell.edu/" />
+<title>autocomplete</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">autocomplete</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${homepage}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=searchBox</td>
+	<td>introduction to wine</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=HADM 4300: Introduction to Wines</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=HADM 4300: Introduction to Wines</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${homepage}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=searchBox</td>
+	<td>polish</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=POLSH 1132: Elementary Polish II</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${homepage}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=searchBox</td>
+	<td>sailing</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=PE 1483: Recreational Sailing</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${homepage}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=q</td>
+	<td>hours</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Cornell University Library Hours</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${homepage}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=q</td>
+	<td>jstor</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=JSTOR: the scholarly journal archive</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
