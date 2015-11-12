@@ -59,11 +59,11 @@
 <tr>
 	<td>sendKeys</td>
 	<td>id=searchBox</td>
-	<td>sailing</td>
+	<td>revolution</td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>link=PE 1483: Recreational Sailing</td>
+	<td>link=HIST 2860: The French Revolution</td>
 	<td></td>
 </tr>
 <tr>
