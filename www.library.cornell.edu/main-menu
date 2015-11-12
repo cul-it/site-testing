@@ -83,7 +83,7 @@
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>css=#edit-description &gt; label</td>
+	<td>css=label.control-label</td>
 	<td>Search course help</td>
 </tr>
 <tr>

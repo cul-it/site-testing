@@ -73,7 +73,12 @@
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>//div[@id='node-115']/div/div/div/div/h2[2]</td>
+	<td>css=h2</td>
+	<td>Copyright and Intellectual Property</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//article[@id='node-115']/div/div/div/h2[2]</td>
 	<td>Digitization and Digital Content Management</td>
 </tr>
 <tr>
@@ -168,7 +173,7 @@
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>//div[@id='node-210']/div/div/div/div/h2[2]</td>
+	<td>//article[@id='node-210']/div/div/div/h2[2]</td>
 	<td>Formats</td>
 </tr>
 <tr>
