@@ -338,11 +338,6 @@
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>link=Search Guide</td>
-	<td>Search Guide</td>
-</tr>
-<tr>
-	<td>assertText</td>
 	<td>//article[@id='node-25']/div/div/div/h2[3]</td>
 	<td>Evaluating resources</td>
 </tr>
