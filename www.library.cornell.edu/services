@@ -82,8 +82,28 @@
 	<td>Digitization and Digital Content Management</td>
 </tr>
 <tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
-	<td>link=Course Reserves</td>
+	<td>link=Courses</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Course Reserves Overview</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Submitting Course Reserves</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Submitting Course Reserves</td>
 	<td></td>
 </tr>
 <tr>
@@ -92,9 +112,14 @@
 	<td>How to Submit Course Reserves</td>
 </tr>
 <tr>
-	<td>assertText</td>
-	<td>link=Check the FAQ for Instructors</td>
-	<td>Check the FAQ for Instructors</td>
+	<td>assertElementPresent</td>
+	<td>link=Check the FAQ for instructors</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Services</td>
+	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>

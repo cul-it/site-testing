@@ -58,7 +58,7 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Check the FAQ for Instructors</td>
+	<td>link=Check the FAQ for instructors</td>
 	<td></td>
 </tr>
 <tr>
@@ -68,33 +68,48 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Course Reserves</td>
+	<td>link=How to Submit Course Reserves</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Submit course reserves online</td>
+	<td>link=Submit via Reserves Staff</td>
 	<td></td>
 </tr>
 <tr>
 	<td>assertText</td>
 	<td>css=h1</td>
-	<td>Submit Course Reserves Online</td>
+	<td>Course Reserves: Submit via Reserves Staff</td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>link=Create a new reserves list</td>
+	<td>assertElementPresent</td>
+	<td>//article[@id='node-3315']/div/div/div/p[2]/a/strong</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>link=Add reserve items to your course</td>
+	<td>assertElementPresent</td>
+	<td>//article[@id='node-3315']/div/div/div/p[5]/a[3]/strong</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>link=Edit reserve items or view their processing status</td>
+	<td>clickAndWait</td>
+	<td>link=Submit via Blackboard</td>
 	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h2</td>
+	<td>Reactivate (clone) reserve items via Blackboard</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//article[@id='node-3316']/div/div/div/h2[2]</td>
+	<td>Add new reserve items via Blackboard</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//article[@id='node-3316']/div/div/div/h2[3]</td>
+	<td>Edit or delete reserve items via Blackboard</td>
 </tr>
 <tr>
 	<td>open</td>
