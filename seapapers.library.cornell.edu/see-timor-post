@@ -4,41 +4,41 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://seapapers2.dev.library.cornell.edu/" />
-<title>logout</title>
+<title>see-timor-post</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">logout</td></tr>
+<tr><td rowspan="1" colspan="3">see-timor-post</td></tr>
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>${homepage}user</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeElementPresent</td>
-	<td>id=edit-submit</td>
-	<td>login_present</td>
-</tr>
-<tr>
-	<td>gotoIf</td>
-	<td>storedVars['login_present']===true</td>
-	<td>skip_logout</td>
-</tr>
-<tr>
-	<td>assertElementPresent</td>
-	<td>link=Log out</td>
+	<td>${homepage}users/test-timor-post-view</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Log out</td>
+	<td>link=Issues</td>
 	<td></td>
 </tr>
 <tr>
-	<td>label</td>
-	<td>skip_logout</td>
+	<td>assertText</td>
+	<td>id=page-title</td>
+	<td>Issues</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Title</td>
+	<td>Title</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Publication Date</td>
+	<td>Publication Date</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//span[contains(@class, 'file')]/a)[1]</td>
 	<td></td>
 </tr>
 </tbody></table>
