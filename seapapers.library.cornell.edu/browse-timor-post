@@ -37,8 +37,8 @@
 	<td>Timor Post</td>
 </tr>
 <tr>
-	<td>assertElementPresent</td>
-	<td>css=td.views-field.views-field-nothing &gt; a</td>
+	<td>selectWindow</td>
+	<td>null</td>
 	<td></td>
 </tr>
 <tr>
@@ -47,13 +47,13 @@
 	<td></td>
 </tr>
 <tr>
-	<td>assertText</td>
-	<td>link=Timor Post</td>
-	<td>Timor Post</td>
+	<td>clickAndWait</td>
+	<td>xpath=//li[contains(@class, 'views-row-first')]//a</td>
+	<td></td>
 </tr>
 <tr>
-	<td>assertElementPresent</td>
-	<td>css=span.date-display-single</td>
+	<td>open</td>
+	<td>${homepage}</td>
 	<td></td>
 </tr>
 </tbody></table>
