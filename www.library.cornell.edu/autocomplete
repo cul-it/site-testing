@@ -24,16 +24,16 @@
 <tr>
 	<td>sendKeys</td>
 	<td>id=searchBox</td>
-	<td>introduction to wine</td>
+	<td>creative</td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>link=HADM 4300: Introduction to Wines</td>
+	<td>link=ENGL 2800: Introduction to Creative Writing</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyElementPresent</td>
-	<td>link=HADM 4300: Introduction to Wines</td>
+	<td>link=ENGL 2800: Introduction to Creative Writing</td>
 	<td></td>
 </tr>
 <tr>
@@ -44,11 +44,11 @@
 <tr>
 	<td>sendKeys</td>
 	<td>id=searchBox</td>
-	<td>polish</td>
+	<td>beer</td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>link=POLSH 1132: Elementary Polish II</td>
+	<td>link=VIEN 4300: The Science and Technology of Beer</td>
 	<td></td>
 </tr>
 <tr>
@@ -63,7 +63,7 @@
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>link=HIST 2860: The French Revolution</td>
+	<td>link=HIST 1107: FWS: Revolution &amp; Renewal</td>
 	<td></td>
 </tr>
 <tr>
@@ -96,7 +96,6 @@
 	<td>link=JSTOR: the scholarly journal archive</td>
 	<td></td>
 </tr>
-
 </tbody></table>
 </body>
 </html>
