@@ -23,8 +23,8 @@
 </tr>
 <tr>
 	<td>sendKeys</td>
-	<td>id=searchBox</td>
-	<td>creative</td>
+	<td>id=search_box</td>
+	<td>permanent</td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
@@ -43,8 +43,8 @@
 </tr>
 <tr>
 	<td>sendKeys</td>
-	<td>id=searchBox</td>
-	<td>beer</td>
+	<td>id=search_box</td>
+	<td>permanent</td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
@@ -58,8 +58,8 @@
 </tr>
 <tr>
 	<td>sendKeys</td>
-	<td>id=searchBox</td>
-	<td>revolution</td>
+	<td>id=search_box</td>
+	<td>permanent</td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>

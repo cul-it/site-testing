@@ -18,7 +18,7 @@
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=searchBox</td>
+	<td>id=search_box</td>
 	<td>Wine</td>
 </tr>
 <tr>
@@ -48,13 +48,8 @@
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=searchBox</td>
-	<td>sheep</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=div.main-content</td>
-	<td></td>
+	<td>id=search_box</td>
+	<td>MATH LIBRARY PERMANENT RESERVES: Math Library Permanent Reserves [SHERIDAN]</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
