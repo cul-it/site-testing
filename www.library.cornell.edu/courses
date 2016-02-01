@@ -32,14 +32,19 @@
 	<td></td>
 </tr>
 <tr>
-	<td>assertText</td>
-	<td>css=h2</td>
-	<td>Search result for 'Wine'</td>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
 </tr>
 <tr>
 	<td>assertText</td>
 	<td>css=h1</td>
-	<td>Course Help Search Result</td>
+	<td>Search Course Reserves</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td></td>
+	<td>Introduction to Wines</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -57,9 +62,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>assertText</td>
-	<td>css=h2</td>
-	<td>Search result for 'sheep'</td>
+	<td>waitForTextPresent</td>
+	<td></td>
+	<td>College Physics</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>

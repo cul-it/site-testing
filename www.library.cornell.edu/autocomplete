@@ -28,12 +28,12 @@
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>link=ENGL 2800: Introduction to Creative Writing</td>
+	<td>link=MATH LIBRARY PERMANENT RESERVES: Math Library Permanent Reserves [SHERIDAN]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyElementPresent</td>
-	<td>link=ENGL 2800: Introduction to Creative Writing</td>
+	<td>link=MATH LIBRARY PERMANENT RESERVES: Math Library Permanent Reserves [SHERIDAN]</td>
 	<td></td>
 </tr>
 <tr>
@@ -48,7 +48,7 @@
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>link=VIEN 4300: The Science and Technology of Beer</td>
+	<td>link=MUSIC 0000: Music Permanent Reserve [ADMINISTRATOR]</td>
 	<td></td>
 </tr>
 <tr>
@@ -63,7 +63,7 @@
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>link=HIST 1107: FWS: Revolution &amp; Renewal</td>
+	<td>link=PERMANENT RESERVE: Permanent Reserve</td>
 	<td></td>
 </tr>
 <tr>
