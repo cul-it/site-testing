@@ -19,7 +19,7 @@
 <tr>
 	<td>assertText</td>
 	<td>css=h2</td>
-	<td>Courses</td>
+	<td>Course Reserves</td>
 </tr>
 <tr>
 	<td>assertText</td>
