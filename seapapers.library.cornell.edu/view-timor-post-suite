@@ -13,6 +13,12 @@
 <tr><td><a href="login-timor-view">login-timor-view</a></td></tr>
 <tr><td><a href="see-timor-post">see-timor-post</a></td></tr>
 <tr><td><a href="browse-timor-post">browse-timor-post</a></td></tr>
+<tr><td><a href="logout">logout</a></td></tr>
+<tr><td><a href="login-timor-edit">login-timor-edit</a></td></tr>
+<tr><td><a href="see-timor-post">see-timor-post</a></td></tr>
+<tr><td><a href="browse-timor-post">browse-timor-post</a></td></tr>
+<tr><td><a href="see-contributor-tools">see-contributor-tools</a></td></tr>
+<tr><td><a href="upload-timor-post">upload-timor-post</a></td></tr>
 </tbody></table>
 </body>
 </html>

@@ -4,12 +4,12 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://seapapers2.dev.library.cornell.edu/" />
-<title>logout</title>
+<title>see-contributor-tools</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">logout</td></tr>
+<tr><td rowspan="1" colspan="3">see-contributor-tools</td></tr>
 </thead><tbody>
 <tr>
 	<td>open</td>
@@ -17,30 +17,36 @@
 	<td></td>
 </tr>
 <tr>
-	<td>storeElementPresent</td>
-	<td>link=Log out</td>
-	<td>login_present</td>
-</tr>
-<tr>
-	<td>gotoIf</td>
-	<td>storedVars['login_present']===false</td>
-	<td>skip_logout</td>
-</tr>
-<tr>
-	<td>assertElementPresent</td>
-	<td>link=Log out</td>
+	<td>selectWindow</td>
+	<td>null</td>
 	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#block-menu-menu-contributor-tools &gt; h2</td>
+	<td>Contributor Tools</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Log out</td>
+	<td>link=My Uploads</td>
 	<td></td>
 </tr>
 <tr>
-	<td>label</td>
-	<td>skip_logout</td>
+	<td>verifyText</td>
+	<td>id=page-title</td>
+	<td>My Issue Uploads</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Add Issues</td>
 	<td></td>
 </tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=page-title</td>
+	<td>Add an Issue</td>
+</tr>
+
 </tbody></table>
 </body>
 </html>

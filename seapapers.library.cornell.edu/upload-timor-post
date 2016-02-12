@@ -4,12 +4,12 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://seapapers2.dev.library.cornell.edu/" />
-<title>logout</title>
+<title>upload-timor-post</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">logout</td></tr>
+<tr><td rowspan="1" colspan="3">upload-timor-post</td></tr>
 </thead><tbody>
 <tr>
 	<td>open</td>
@@ -17,29 +17,39 @@
 	<td></td>
 </tr>
 <tr>
-	<td>storeElementPresent</td>
-	<td>link=Log out</td>
-	<td>login_present</td>
-</tr>
-<tr>
-	<td>gotoIf</td>
-	<td>storedVars['login_present']===false</td>
-	<td>skip_logout</td>
-</tr>
-<tr>
-	<td>assertElementPresent</td>
-	<td>link=Log out</td>
+	<td>clickAndWait</td>
+	<td>link=Add Issues</td>
 	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Timor Post</td>
+	<td>Timor Post</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Log out</td>
+	<td>link=Timor Post</td>
 	<td></td>
 </tr>
 <tr>
-	<td>label</td>
-	<td>skip_logout</td>
-	<td></td>
+	<td>assertTextNotPresent</td>
+	<td>id=page-title</td>
+	<td>Access denied</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=label</td>
+	<td>exact:Issue Publication *</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=span.form-required</td>
+	<td>exact:*</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#block-views-current-issue-dates-block &gt; h2</td>
+	<td>Current Issues</td>
 </tr>
 </tbody></table>
 </body>
