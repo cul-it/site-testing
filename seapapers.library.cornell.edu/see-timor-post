@@ -41,6 +41,16 @@
 	<td>xpath=(//span[contains(@class, 'file')]/a)[1]</td>
 	<td></td>
 </tr>
+<tr>
+	<td>assertNotText</td>
+	<td>id=page-title</td>
+	<td>Page not found</td>
+</tr>
+<tr>
+	<td>assertNotText</td>
+	<td>h1</td>
+	<td>Page not found</td>
+</tr>
 </tbody></table>
 </body>
 </html>
