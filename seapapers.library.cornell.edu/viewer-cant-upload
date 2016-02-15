@@ -31,7 +31,26 @@
 	<td>link=Add Issues</td>
 	<td>Add Issues</td>
 </tr>
-
+<tr>
+	<td>open</td>
+	<td>${homepage}add-an-issue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page-title</td>
+	<td>Access denied</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#block-system-main &gt; div.content</td>
+	<td>You are not authorized to access this page.</td>
+</tr>
 </tbody></table>
 </body>
 </html>
