@@ -32,36 +32,50 @@
 	<td></td>
 </tr>
 <tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
-	<td>link=COAP Application for Funding</td>
+	<td>link=COAP Funding</td>
 	<td></td>
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>css=h1</td>
-	<td>CUWebLogin</td>
-</tr>
-<tr>
-	<td>assertTitle</td>
-	<td>Cornell University Web Login</td>
-	<td></td>
+	<td>css=div.field-item.even &gt; p</td>
+	<td>The Cornell Open-Access Publication Fund will underwrite reasonable article processing fees for open-access journals when funds are not otherwise available.&nbsp;&nbsp;The fund is supported jointly by the Provost and the Cornell University Library.</td>
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>link=To log out, you must Exit or Quit your browser.</td>
-	<td>To log out, you must Exit or Quit your browser.</td>
+	<td>css=strong</td>
+	<td>Eligible Authors</td>
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>//div[@id='footer-content']/p[3]</td>
-	<td>CUWebLogin is a component of Cornell University's central authentication service. If you are unsure of the authenticity of any online University service, please contact the IT Service Desk.</td>
+	<td>//article[@id='node-1909']/div/div/div/p[3]/strong</td>
+	<td>Eligible Articles</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//article[@id='node-1909']/div/div/div/p[4]/strong</td>
+	<td>Eligible Publication Venues</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//article[@id='node-1909']/div/div/div/p[10]/strong</td>
+	<td>Fund Cap</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//article[@id='node-1909']/div/div/div/p[12]/strong</td>
+	<td>Regular Review</td>
 </tr>
 <tr>
 	<td>open</td>
 	<td>${homepage}</td>
 	<td></td>
 </tr>
-
 </tbody></table>
 </body>
 </html>
