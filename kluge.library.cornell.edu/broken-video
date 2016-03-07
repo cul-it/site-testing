@@ -27,11 +27,6 @@
 	<td></td>
 </tr>
 <tr>
-	<td>assertTitle</td>
-	<td>Kaltura Embed Player iFrame</td>
-	<td></td>
-</tr>
-<tr>
 	<td>waitForElementPresent</td>
 	<td>//button</td>
 	<td></td>
