@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://kluge.library.cornell.edu/" />
+<title>play-video</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">play-video</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/conversations/enzensberger/film/1965</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>//iframe[contains(@class,'mwEmbedKalturaIframe')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=div.spinner</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
