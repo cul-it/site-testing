@@ -12,6 +12,7 @@
 <tr><td><a href="homepage">homepage</a></td></tr>
 <tr><td><a href="about">about</a></td></tr>
 <tr><td><a href="other">other</a></td></tr>
+<tr><td><a href="login-no-saml">login-no-saml</a></td></tr>
 </tbody></table>
 </body>
 </html>
