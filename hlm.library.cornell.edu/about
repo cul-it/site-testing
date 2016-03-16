@@ -22,19 +22,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>assertTitle</td>
-	<td>Hospitality, Labor, and Management Library | clone-hlm.library.cornell.edu</td>
-	<td></td>
-</tr>
-<tr>
 	<td>assertText</td>
 	<td>//div[@id='node-2']/div/div/div/div/h2[2]</td>
 	<td>Hotel, Labor, and Management Library Consolidation FAQ</td>
-</tr>
-<tr>
-	<td>assertTitle</td>
-	<td>Hospitality, Labor, and Management Library | clone-hlm.library.cornell.edu</td>
-	<td></td>
 </tr>
 <tr>
 	<td>assertText</td>
@@ -56,7 +46,6 @@
 	<td>id=thickbox</td>
 	<td></td>
 </tr>
-
 </tbody></table>
 </body>
 </html>

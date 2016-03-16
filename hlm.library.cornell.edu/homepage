@@ -17,11 +17,6 @@
 	<td></td>
 </tr>
 <tr>
-	<td>assertTitle</td>
-	<td>Hospitality, Labor, and Management Library | clone-hlm.library.cornell.edu</td>
-	<td></td>
-</tr>
-<tr>
 	<td>assertText</td>
 	<td>css=h1.sitename</td>
 	<td>Hospitality, Labor, and Management Library</td>
@@ -66,7 +61,6 @@
 	<td></td>
 	<td>(607) 255-5435</td>
 </tr>
-
 </tbody></table>
 </body>
 </html>
