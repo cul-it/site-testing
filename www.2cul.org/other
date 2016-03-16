@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://clone-www.2cul.org/" />
+<title>other</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">other</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${homepage}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=FAQ</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=exact:http://www.columbia.edu/library</td>
+	<td>exact:http://www.columbia.edu/library</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=exact:http://www.mellon.org/</td>
+	<td>exact:http://www.mellon.org/</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=exact:http://ithaka.org/</td>
+	<td>exact:http://ithaka.org/</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=exact:http://2cul.org/activities/intervention</td>
+	<td>exact:http://2cul.org/activities/intervention</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=contact the communications team with this form</td>
+	<td>contact the communications team with this form</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Teams</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=li</td>
+	<td>Steering committee<br />University Librarians and all Associate University Librarians of Columbia and Cornell</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='content']/article/div/div/div/ul/li[10]</td>
+	<td>Assessment<br />Columbia: Nisa Bakkalbasi Cornell: Zsuzsa Koltay</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Initiatives</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=2CUL MOU</td>
+	<td>2CUL MOU</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Strategies for Expanding E-Journal Preservation</td>
+	<td>Strategies for Expanding E-Journal Preservation</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Library Intervention Strategies for Doctoral Students in the Humanities</td>
+	<td>Library Intervention Strategies for Doctoral Students in the Humanities</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Technical Services Integration</td>
+	<td>Technical Services Integration</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Reports &amp; Presentations</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=2CUL TSI Phase Two, Year Two (2014) Report</td>
+	<td>2CUL TSI Phase Two, Year Two (2014) Report</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Final Report of the 2CUL LOCKSS Assessment Team (Oct 2011)</td>
+	<td>Final Report of the 2CUL LOCKSS Assessment Team (Oct 2011)</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=2CUL Progress Report: October 2009-September 2010</td>
+	<td>2CUL Progress Report: October 2009-September 2010</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Technical Services Integration related reports and presentations</td>
+	<td>Technical Services Integration related reports and presentations</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=In the Media</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Cornell and Columbia Libraries to Build a Joint Technical Infrastructure</td>
+	<td>Cornell and Columbia Libraries to Build a Joint Technical Infrastructure</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Columbia University Libraries Announces Slavic and East European Collection Development Agreement with Cornell University Library</td>
+	<td>Columbia University Libraries Announces Slavic and East European Collection Development Agreement with Cornell University Library</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Columbia, Cornell Libraries To Partner on Collection Development, Acquisitions, Preservation</td>
+	<td>Columbia, Cornell Libraries To Partner on Collection Development, Acquisitions, Preservation</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Privacy</td>
+	<td>Privacy</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Contact Us</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Contact Us | 2CUL</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Mollom privacy policy</td>
+	<td>Mollom privacy policy</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
