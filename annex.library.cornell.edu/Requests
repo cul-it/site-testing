@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://clone-annex.library.cornell.edu/" />
+<title>Requests</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Requests</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${homepage}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Requests »</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Requests | Library Annex</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Library Annex Request Information page</td>
+	<td>Library Annex Request Information page</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Library Annex Request Form</td>
+	<td>Library Annex Request Form</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page-title</td>
+	<td>Requests</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Annex Request Information</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page-title</td>
+	<td>Annex Requests Information</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//article[@id='node-page-14']/div/div/div/div/p[5]/strong</td>
+	<td>How to place a book or journal delivery request:</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//article[@id='node-page-14']/div/div/div/div/p[6]/strong</td>
+	<td>How to place an electronic document delivery request:</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>xpath=(//a[contains(text(),'Annex Request Form')])[2]</td>
+	<td>Annex Request Form</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Annex Request Form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page-title</td>
+	<td>Request Form</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=span.mollom-captcha-content.mollom-image-captcha</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//form[@id='webform-client-form-7']/div/div[3]/label</td>
+	<td>exact:Cornell ID or Library card number *</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=edit-submitted-cornell-id-or-library-card-number</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Request Form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Request Form | Library Annex</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

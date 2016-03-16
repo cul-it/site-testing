@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://clone-annex.library.cornell.edu/" />
+<title>homepage</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">homepage</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${homepage}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page-title</td>
+	<td>Welcome to the Library Annex</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=#block-block-8 &gt; div.block-inner.clearfix &gt; h2.block-title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#block-block-5 &gt; div.block-inner.clearfix &gt; h2.block-title</td>
+	<td>Hours</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=libannex@cornell.edu</td>
+	<td>libannex@cornell.edu</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td></td>
+	<td>(607) 253-3431</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#block-block-8 &gt; div.block-inner.clearfix &gt; div.content.clearfix &gt; p</td>
+	<td>Palm Road, Cornell University, Ithaca, NY 14853</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Leave us feedback</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
