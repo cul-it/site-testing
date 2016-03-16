@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://clone-hlm.library.cornell.edu/" />
+<title>staff-directory</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">staff-directory</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${homepage}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Staff Directory</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=click here</td>
+	<td>click here</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=p</td>
+	<td>To see the full organizational chart for the Hospitality, Labor, and Management Library, click here.</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=wrap</td>
+	<td>Hospitality, Labor, and Management Library Home <br /> <br /> About Staff Directory <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> Staff Directory To see the full organizational chart for the Hospitality, Labor, and Management Library, click here.<br /> Desi Alexander Digital Collections Assistant Barbara Bartholomew Management Reserves Assistant Cheryl Beredo&nbsp;&nbsp;Director, Kheel Center Ken Bolton SHA Research Librarian Marcia Clark Archival Cataloging Specialist Suzanne Cohen&nbsp;&nbsp;Collection Development Coordinator Billy Coté&nbsp;&nbsp;Access Services Manager Julie Dean Finance Assistant Jim DelRosso Digital Projects Coordinator Aliqae Geraci&nbsp;&nbsp;Labor &amp; Employment Coordinator Steve Gollnick Digital Projects Specialist Dan Hickey Assistant Director of Research and Learning Services Melissa Holland&nbsp;&nbsp;Archival Research Assistant Susan Kendrick Business Research and Data Librarian Lynn King&nbsp;&nbsp;Serials Specialist Garima Lal Business Research and Instruction Librarian Deb Lamb-Deans&nbsp;&nbsp;Assistant Director Kelly LaVoice Business &amp; Hospitality Coordinator Curtis Lyons&nbsp;&nbsp;Harriet Morel Oxman Director Randall Miles Technical Services Archivist Chris Miller ILR Research Librarian Barb Morley Digital Archivist Vanessa Ng Catherwood Evening/Weekend Supervisor Sara Palmer Digital Projects Assistant Jeffrey Shampnois Management Service Desk Manager Will Sheppard Reference Assistant Patrizia Sione&nbsp;&nbsp;Research Archivist Neely Tang&nbsp;&nbsp;Off-site Public Services Librarian Catherine Vellake Catherwood Evening/Weekend Supervisor Jessica Withers Communications and Development Assistant <br /><br /><br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> School of Hotel Administration | ILR School | Johnson Graduate School of Management<br /> Cornell University | Cornell University Library | Contact the HLM Library: (607) 255-5435 or email us.<br /> <br /> <br /> <br /> Staff Login ©2016 | Cornell University Library, Ithaca NY 14853 | 607-255-4144</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td></td>
+	<td>Director, Kheel Center</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=thickbox</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
