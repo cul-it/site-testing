@@ -27,16 +27,6 @@
 	<td>permanent</td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>link=MATH LIBRARY PERMANENT RESERVES: Math Library Permanent Reserves [SHERIDAN]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>link=MATH LIBRARY PERMANENT RESERVES: Math Library Permanent Reserves [SHERIDAN]</td>
-	<td></td>
-</tr>
-<tr>
 	<td>open</td>
 	<td>${homepage}</td>
 	<td></td>
