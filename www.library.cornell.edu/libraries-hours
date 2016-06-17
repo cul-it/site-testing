@@ -72,6 +72,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>verifyText</td>
+	<td>css=td.s-lc-whw-locname</td>
+	<td>Industrial and Labor Relations Library</td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
 	<td>link=Libraries and Hours</td>
 	<td></td>
@@ -107,6 +112,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>verifyText</td>
+	<td>css=td.s-lc-whw-locname</td>
+	<td>Law Circulation</td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
 	<td>link=Libraries and Hours</td>
 	<td></td>
@@ -120,6 +130,11 @@
 	<td>waitForTitle</td>
 	<td>Mann Library | Cornell University Library</td>
 	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=td.s-lc-whw-locname</td>
+	<td>Mann Library</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -137,6 +152,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>verifyText</td>
+	<td>css=td.s-lc-whw-locname</td>
+	<td>Music Library</td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
 	<td>link=Libraries and Hours</td>
 	<td></td>
@@ -152,14 +172,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>assertText</td>
-	<td>css=div.library-hours &gt; div &gt; h2</td>
-	<td>Library Hours for Academic Semester</td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>link=Veterinary Library (Flower-Sprecher Veterinary Library)</td>
-	<td>Veterinary Library (Flower-Sprecher Veterinary Library)</td>
+	<td>verifyText</td>
+	<td>css=td.s-lc-whw-locname</td>
+	<td>Veterinary Library</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
