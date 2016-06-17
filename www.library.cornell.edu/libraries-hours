@@ -38,7 +38,7 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>//section[@id='block-views-libraries-and-hours-block-2']/div/div/div/div[2]/div[2]/div/span/div/div[2]/a/h2</td>
+	<td>link=Fine Arts Library</td>
 	<td></td>
 </tr>
 <tr>
@@ -47,109 +47,134 @@
 	<td></td>
 </tr>
 <tr>
+	<td>verifyText</td>
+	<td>css=td.s-lc-whw-locname</td>
+	<td>Fine Arts Library</td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
 	<td>link=Libraries and Hours</td>
 	<td></td>
 </tr>
 <tr>
-	<td>assertText</td>
-	<td>//section[@id='block-views-libraries-and-hours-block-2']/div/div/div/div[2]/div[2]/div[2]/div[2]/div[2]/div/span/div/div[2]/a/h2</td>
-	<td>Industrial and Labor Relations Library</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//section[@id='block-views-libraries-and-hours-block-2']/div/div/div/div[2]/div[2]/div[2]/div[2]/div[2]/div/span/div/div[2]/a/h2</td>
+	<td>selectWindow</td>
+	<td>null</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyTitle</td>
+	<td>clickAndWait</td>
+	<td>link=Industrial and Labor Relations Library</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTitle</td>
 	<td>Industrial and Labor Relations Library | Cornell University Library</td>
 	<td></td>
 </tr>
 <tr>
+	<td>verifyText</td>
+	<td>css=td.s-lc-whw-locname</td>
+	<td>Industrial and Labor Relations Library</td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
 	<td>link=Libraries and Hours</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>//section[@id='block-views-libraries-and-hours-block-2']/div/div/div/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div/span/div/div[2]/a/h2</td>
+	<td>link=Kroch Library, Division of Rare &amp; Manuscript Collections</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyTitle</td>
+	<td>waitForTitle</td>
 	<td>Kroch Library, Division of Rare &amp; Manuscript Collections | Cornell University Library</td>
 	<td></td>
 </tr>
 <tr>
+	<td>verifyText</td>
+	<td>css=td.s-lc-whw-locname</td>
+	<td>Kroch Library, Division of Rare &amp; Manuscript Collections</td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
 	<td>link=Libraries and Hours</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>//section[@id='block-views-libraries-and-hours-block-2']/div/div/div/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div/span/div/div[2]/a/h2</td>
+	<td>link=Law Library</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyTitle</td>
+	<td>waitForTitle</td>
 	<td>Law Library | Cornell University Library</td>
 	<td></td>
 </tr>
 <tr>
+	<td>verifyText</td>
+	<td>css=td.s-lc-whw-locname</td>
+	<td>Law Circulation</td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
 	<td>link=Libraries and Hours</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>//section[@id='block-views-libraries-and-hours-block-2']/div/div/div/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div/span/div/div[2]/a/h2</td>
+	<td>link=Mann Library</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyTitle</td>
+	<td>waitForTitle</td>
 	<td>Mann Library | Cornell University Library</td>
 	<td></td>
 </tr>
 <tr>
+	<td>verifyText</td>
+	<td>css=td.s-lc-whw-locname</td>
+	<td>Mann Library</td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
 	<td>link=Libraries and Hours</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>//section[@id='block-views-libraries-and-hours-block-2']/div/div/div/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div/span/div/div[2]/a/h2</td>
+	<td>link=Music Library</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyTitle</td>
+	<td>waitForTitle</td>
 	<td>Music Library | Cornell University Library</td>
 	<td></td>
 </tr>
 <tr>
+	<td>verifyText</td>
+	<td>css=td.s-lc-whw-locname</td>
+	<td>Music Library</td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
 	<td>link=Libraries and Hours</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>//section[@id='block-views-libraries-and-hours-block-2']/div/div/div/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div/span/div/div[2]/a/h2</td>
+	<td>link=Veterinary Library</td>
 	<td></td>
 </tr>
 <tr>
-	<td>assertTitle</td>
+	<td>waitForTitle</td>
 	<td>Veterinary Library | Cornell University Library</td>
 	<td></td>
 </tr>
 <tr>
-	<td>assertText</td>
-	<td>css=div.library-hours &gt; div &gt; h2</td>
-	<td>Library Hours for Academic Semester</td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>link=Veterinary Library (Flower-Sprecher Veterinary Library)</td>
-	<td>Veterinary Library (Flower-Sprecher Veterinary Library)</td>
+	<td>verifyText</td>
+	<td>css=td.s-lc-whw-locname</td>
+	<td>Veterinary Library</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
