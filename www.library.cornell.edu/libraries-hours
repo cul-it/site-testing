@@ -67,7 +67,7 @@
 	<td></td>
 </tr>
 <tr>
-	<td>verifyTitle</td>
+	<td>waitForTitle</td>
 	<td>Industrial and Labor Relations Library | Cornell University Library</td>
 	<td></td>
 </tr>
@@ -82,7 +82,7 @@
 	<td></td>
 </tr>
 <tr>
-	<td>verifyTitle</td>
+	<td>waitForTitle</td>
 	<td>Kroch Library, Division of Rare &amp; Manuscript Collections | Cornell University Library</td>
 	<td></td>
 </tr>
@@ -102,7 +102,7 @@
 	<td></td>
 </tr>
 <tr>
-	<td>verifyTitle</td>
+	<td>waitForTitle</td>
 	<td>Law Library | Cornell University Library</td>
 	<td></td>
 </tr>
@@ -117,7 +117,7 @@
 	<td></td>
 </tr>
 <tr>
-	<td>verifyTitle</td>
+	<td>waitForTitle</td>
 	<td>Mann Library | Cornell University Library</td>
 	<td></td>
 </tr>
@@ -132,7 +132,7 @@
 	<td></td>
 </tr>
 <tr>
-	<td>verifyTitle</td>
+	<td>waitForTitle</td>
 	<td>Music Library | Cornell University Library</td>
 	<td></td>
 </tr>
@@ -147,7 +147,7 @@
 	<td></td>
 </tr>
 <tr>
-	<td>assertTitle</td>
+	<td>waitForTitle</td>
 	<td>Veterinary Library | Cornell University Library</td>
 	<td></td>
 </tr>
