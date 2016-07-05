@@ -62,19 +62,34 @@
 	<td>Code of Academic Integrity</td>
 </tr>
 <tr>
-	<td>assertText</td>
-	<td>link=APA citation style</td>
-	<td>APA citation style</td>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>link=MLA citation style</td>
-	<td>MLA citation style</td>
+	<td>link=American Psychological Association (APA) citation style</td>
+	<td>American Psychological Association (APA) citation style</td>
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>link=Chicago Manual of Style online</td>
-	<td>Chicago Manual of Style online</td>
+	<td>link=Modrn Language Association (MLA) citation style</td>
+	<td>Modrn Language Association (MLA) citation style</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Chicago Manual of Style (CMS) online</td>
+	<td>Chicago Manual of Style (CMS) online</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Scientific Style anf Format (CSE) online</td>
+	<td>Scientific Style anf Format (CSE) online</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Citation Styles Library Guide</td>
+	<td>Citation Styles Library Guide</td>
 </tr>
 <tr>
 	<td>assertText</td>
@@ -82,9 +97,9 @@
 	<td>Annotated Bibliography Tutorial</td>
 </tr>
 <tr>
-	<td>selectWindow</td>
-	<td>null</td>
-	<td></td>
+	<td>assertText</td>
+	<td>link=Code of Academic Integrity</td>
+	<td>Code of Academic Integrity</td>
 </tr>
 <tr>
 	<td>assertTitle</td>
