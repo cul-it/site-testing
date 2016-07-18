@@ -28,7 +28,7 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>css=a.cul-icon-chevron-right</td>
+	<td>css=h2 &gt; a</td>
 	<td></td>
 </tr>
 <tr>
