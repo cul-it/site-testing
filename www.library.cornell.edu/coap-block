@@ -53,11 +53,6 @@
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>//article[@id='node-1909']/div/div/div/p[3]/strong</td>
-	<td>Eligible Articles</td>
-</tr>
-<tr>
-	<td>assertText</td>
 	<td>//article[@id='node-1909']/div/div/div/p[4]/strong</td>
 	<td>Eligible Publication Venues</td>
 </tr>
