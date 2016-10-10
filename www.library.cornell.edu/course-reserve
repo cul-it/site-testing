@@ -56,12 +56,6 @@
 	<td>id=course-reserves-all-inline.0.0</td>
 	<td>Title</td>
 </tr>
-<tr>
-	<td>assertText</td>
-	<td>//body[@id='top']/div[4]/div/div[2]/div</td>
-	<td>× Warning message NOTE: Your search matched multiple courses/sections. The first match appears below. If you are looking for a different section, try one of the following links.<br />MUSIC 0000 (ADMINISTRATOR, Ares)</td>
-</tr>
-
 </tbody></table>
 </body>
 </html>
