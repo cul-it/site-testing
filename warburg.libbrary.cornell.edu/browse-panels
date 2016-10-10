@@ -103,11 +103,6 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>//img[contains(@src,'http://dev-warburglibrarycornelledu.pantheonsite.io/sites/default/files/styles/carousel/public/panels/panel_45.jpg?itok=JBfcVaDP')]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
 	<td>css=a.zoom-in</td>
 	<td></td>
 </tr>
