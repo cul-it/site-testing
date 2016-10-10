@@ -44,7 +44,7 @@
 <tr>
 	<td>assertText</td>
 	<td>css=div.field-item.even &gt; p</td>
-	<td>The Cornell Open-Access Publication Fund will underwrite reasonable article processing fees for open-access journals when funds are not otherwise available.&nbsp;&nbsp;The fund is supported jointly by the Provost and the Cornell University Library.</td>
+	<td>The Cornell Open-Access Publication Fund will underwrite reasonable processing fees for open access publications by Cornell authors when funds are not otherwise available. The fund is supported jointly by the Provost and the Cornell University Library.</td>
 </tr>
 <tr>
 	<td>assertText</td>
@@ -52,23 +52,23 @@
 	<td>Eligible Authors</td>
 </tr>
 <tr>
-	<td>assertText</td>
-	<td>//article[@id='node-1909']/div/div/div/p[3]/strong</td>
-	<td>Eligible Articles</td>
+	<td>assertTextPresent</td>
+	<td></td>
+	<td>Eligible Publication Types</td>
 </tr>
 <tr>
-	<td>assertText</td>
-	<td>//article[@id='node-1909']/div/div/div/p[4]/strong</td>
+	<td>assertTextPresent</td>
+	<td></td>
 	<td>Eligible Publication Venues</td>
 </tr>
 <tr>
-	<td>assertText</td>
-	<td>//article[@id='node-1909']/div/div/div/p[10]/strong</td>
+	<td>assertTextPresent</td>
+	<td></td>
 	<td>Fund Cap</td>
 </tr>
 <tr>
-	<td>assertText</td>
-	<td>//article[@id='node-1909']/div/div/div/p[12]/strong</td>
+	<td>assertTextPresent</td>
+	<td></td>
 	<td>Regular Review</td>
 </tr>
 <tr>

@@ -33,8 +33,8 @@
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>link=Visit Us</td>
-	<td>Visit Us</td>
+	<td>link=Visit</td>
+	<td>Visit</td>
 </tr>
 <tr>
 	<td>assertText</td>
@@ -83,8 +83,8 @@
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>link=Scientific Style anf Format (CSE) online</td>
-	<td>Scientific Style anf Format (CSE) online</td>
+	<td>link=Scientific Style and Format (CSE) online</td>
+	<td>Scientific Style and Format (CSE) online</td>
 </tr>
 <tr>
 	<td>assertText</td>

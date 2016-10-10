@@ -88,8 +88,8 @@
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>link=Library Guides</td>
-	<td>Library Guides</td>
+	<td>link=Research Guides</td>
+	<td>Research Guides</td>
 </tr>
 <tr>
 	<td>assertText</td>
@@ -128,8 +128,8 @@
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>link=Library Guides</td>
-	<td>Library Guides</td>
+	<td>link=Research Guides</td>
+	<td>Research Guides</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -183,13 +183,13 @@
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>link=Visit Us</td>
-	<td>Visit Us</td>
+	<td>link=Visit</td>
+	<td>Visit</td>
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>link=E-mail Us</td>
-	<td>E-mail Us</td>
+	<td>link=E-mail</td>
+	<td>E-mail</td>
 </tr>
 <tr>
 	<td>assertText</td>
@@ -198,8 +198,8 @@
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>link=Phone Us</td>
-	<td>Phone Us</td>
+	<td>link=Phone</td>
+	<td>Phone</td>
 </tr>
 </tbody></table>
 </body>
