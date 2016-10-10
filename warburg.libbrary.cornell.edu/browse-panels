@@ -82,12 +82,17 @@
 	<td></td>
 </tr>
 <tr>
+	<td>refresh</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForElementPresent</td>
 	<td>css=a.go-home.active</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
+	<td>clickAndWait</td>
 	<td>css=a.go-home.active</td>
 	<td></td>
 </tr>
@@ -129,11 +134,6 @@
 <tr>
 	<td>clickAndWait</td>
 	<td>css=a[title=&quot;Panel 79 Image 2&quot;] &gt; span.panel-number</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=additional-image-link-0</td>
 	<td></td>
 </tr>
 <tr>
