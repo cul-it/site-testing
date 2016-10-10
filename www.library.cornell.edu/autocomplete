@@ -57,9 +57,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>link=*PERMANENT RESERVE: Permanent Reserve Mann Library</td>
+	<td>assertTextPresent</td>
 	<td></td>
+	<td>Permanent Reserve</td>
 </tr>
 <tr>
 	<td>open</td>
