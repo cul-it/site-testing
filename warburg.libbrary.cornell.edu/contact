@@ -17,11 +17,6 @@
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>link=Configure</td>
-	<td></td>
-</tr>
-<tr>
 	<td>clickAndWait</td>
 	<td>link=Contact</td>
 	<td></td>
@@ -36,7 +31,6 @@
 	<td>link=kw33@cornell.edu</td>
 	<td>kw33@cornell.edu</td>
 </tr>
-
 </tbody></table>
 </body>
 </html>
