@@ -157,6 +157,11 @@
 	<td>Mann Library (Albert R. Mann Library)</td>
 </tr>
 <tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForElementPresent</td>
 	<td>css=td.s-lc-whw-locname</td>
 	<td></td>
