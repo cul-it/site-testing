@@ -56,6 +56,8 @@
 	<td>//article[@id='node-1909']/div/div/div/p[4]/strong</td>
 	<td>assertTextPresent</td>
 	<td></td>
+	<td>verifyText</td>
+	<td>//article[@id='node-1909']/div/div/div/p[4]/strong</td>
 	<td>Eligible Publication Types</td>
 </tr>
 <tr>

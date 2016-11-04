@@ -9,6 +9,7 @@
 <table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
 <tr><td><b>Test Suite</b></td></tr>
 <tr><td><a href="setup-homepage">setup-homepage</a></td></tr>
+<tr><td><a href="ares-cache-restore">ares-cache-restore</a></td></tr>
 <tr><td><a href="startingTime">startingTime</a></td></tr>
 <tr><td><a href="main-menu">main-menu</a></td></tr>
 <tr><td><a href="libraries-hours">libraries-hours</a></td></tr>
