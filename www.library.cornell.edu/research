@@ -73,8 +73,8 @@
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>link=Modrn Language Association (MLA) citation style</td>
-	<td>Modrn Language Association (MLA) citation style</td>
+	<td>link=Modern Language Association (MLA) citation style</td>
+	<td>Modern Language Association (MLA) citation style</td>
 </tr>
 <tr>
 	<td>assertText</td>
@@ -125,11 +125,6 @@
 	<td>assertText</td>
 	<td>link=Mendeley</td>
 	<td>Mendeley</td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>link=Comparison of Citation Management Software: EndNote, Zotero, Papers, Mendeley</td>
-	<td>Comparison of Citation Management Software: EndNote, Zotero, Papers, Mendeley</td>
 </tr>
 <tr>
 	<td>assertText</td>
