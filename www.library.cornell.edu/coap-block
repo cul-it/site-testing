@@ -52,8 +52,8 @@
 	<td>Eligible Authors</td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>//article[@id='node-1909']/div/div/div/p[4]/strong</td>
+	<td>assertTextPresent</td>
+	<td></td>
 	<td>Eligible Publication Types</td>
 </tr>
 <tr>
