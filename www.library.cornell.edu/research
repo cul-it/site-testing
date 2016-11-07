@@ -383,7 +383,7 @@
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>id=edit-submit</td>
+	<td>name=op</td>
 	<td>Submit</td>
 </tr>
 <tr>
