@@ -63,12 +63,12 @@
 <tr>
 	<td>assertTextPresent</td>
 	<td></td>
-	<td>Eligible Publication Venues</td>
+	<td>Fund Cap</td>
 </tr>
 <tr>
 	<td>assertTextPresent</td>
 	<td></td>
-	<td>Fund Cap</td>
+	<td>Eligible Publication Venues</td>
 </tr>
 <tr>
 	<td>assertTextPresent</td>
