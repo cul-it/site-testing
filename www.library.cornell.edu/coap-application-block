@@ -27,31 +27,30 @@
 	<td></td>
 </tr>
 <tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
-	<td>link=COAP Application for Funding</td>
+	<td>link=COAP Funding</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyTitle</td>
-	<td>Cornell University Web Login</td>
+	<td>COAP Funding | Cornell University Library</td>
 	<td></td>
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>css=h1</td>
-	<td>CUWebLogin</td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>//div[@id='footer-content']/p[3]</td>
-	<td>CUWebLogin is a component of Cornell University's central authentication service. If you are unsure of the authenticity of any online University service, please contact the IT Service Desk.</td>
+	<td>css=small</td>
+	<td>As of 18 November 2016, COAP program funds are depleted for the 2016-17 academic year. Please watch this page for updates on future funding.</td>
 </tr>
 <tr>
 	<td>open</td>
 	<td>${homepage}</td>
 	<td></td>
 </tr>
-
 </tbody></table>
 </body>
 </html>
