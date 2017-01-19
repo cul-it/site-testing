@@ -32,11 +32,6 @@
 	<td></td>
 </tr>
 <tr>
-	<td>selectWindow</td>
-	<td>null</td>
-	<td></td>
-</tr>
-<tr>
 	<td>clickAndWait</td>
 	<td>link=COAP Funding</td>
 	<td></td>
@@ -50,11 +45,6 @@
 	<td>assertTextPresent</td>
 	<td></td>
 	<td>Eligible Authors</td>
-</tr>
-<tr>
-	<td>assertTextPresent</td>
-	<td></td>
-	<td>Eligible Publication Types</td>
 </tr>
 <tr>
 	<td>assertTextPresent</td>
