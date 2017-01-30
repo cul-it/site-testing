@@ -47,21 +47,9 @@
 	<td>Eligible Authors</td>
 </tr>
 <tr>
-	<td>assertText</td>
-	<td>//article[@id='node-1909']/div/div/div/p[4]/strong</td>
 	<td>assertTextPresent</td>
 	<td></td>
-<<<<<<< HEAD
-	<td>verifyText</td>
-	<td>//article[@id='node-1909']/div/div/div/p[4]/strong</td>
 	<td>Eligible Publication Types</td>
-</tr>
-<tr>
-	<td>assertTextPresent</td>
-	<td></td>
-=======
->>>>>>> release/COAP_block
-	<td>Fund Cap</td>
 </tr>
 <tr>
 	<td>assertTextPresent</td>
