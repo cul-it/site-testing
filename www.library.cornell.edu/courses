@@ -17,6 +17,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>clickAndWait</td>
+	<td>css=h2 &gt; a</td>
+	<td></td>
+</tr>
+<tr>
 	<td>type</td>
 	<td>id=search_box</td>
 	<td>Wine</td>
@@ -27,24 +32,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>selectWindow</td>
-	<td>null</td>
-	<td></td>
-</tr>
-<tr>
-	<td>selectWindow</td>
-	<td>null</td>
-	<td></td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>css=h1</td>
-	<td>Search Course Reserves</td>
-</tr>
-<tr>
-	<td>verifyTextPresent</td>
-	<td></td>
-	<td>Introduction to Wines</td>
+	<td>verifyText</td>
+	<td>css=div.messages.error</td>
+	<td>You have reached this page because you submitted a form that required Javascript to be enabled on your browser. This protection is in place to attempt to prevent automated submissions made on forms. Please return to the page that you came from and enable Javascript on your browser before attempting to submit the form again.</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
