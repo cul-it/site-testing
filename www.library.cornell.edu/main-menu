@@ -48,7 +48,7 @@
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>css=h1</td>
+	<td>link=Search</td>
 	<td>Search</td>
 </tr>
 <tr>
