@@ -19,36 +19,36 @@
 <tr>
 	<td>type</td>
 	<td>id=search_box</td>
-	<td>Reseerves</td>
+	<td>Reserves</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>id=edit-submit</td>
+	<td>id=edit-submit--2</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyTitle</td>
-	<td>Search Course Reserves | Cornell University Library</td>
-	<td></td>
+	<td>assertText</td>
+	<td>css=h1</td>
+	<td>Submission failed</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//body[@id='top']/div[4]/div/div[2]/div</td>
-	<td>× Error message No current course reserve items were found. Please check that you have correctly entered the course number, course name, or instructor. If reserve requests have been submitted, they may be in-progress and show up here shortly. If you or your instructor are expecting reserve items to be available now for this course, please notify us.</td>
+	<td>css=div.messages.error</td>
+	<td>You have reached this page because you submitted a form that required Javascript to be enabled on your browser. This protection is in place to attempt to prevent automated submissions made on forms. Please return to the page that you came from and enable Javascript on your browser before attempting to submit the form again.</td>
 </tr>
 <tr>
-	<td>type</td>
-	<td>id=search_box</td>
-	<td>permanent</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=div.main-content</td>
+	<td>open</td>
+	<td>${homepage}/ares/search/Wine</td>
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>id=edit-submit</td>
+	<td>verifyTextPresent</td>
+	<td></td>
+	<td>Introduction to Wines</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${homepage}/ares/search/permanent</td>
 	<td></td>
 </tr>
 <tr>
