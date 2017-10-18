@@ -8,6 +8,24 @@ require 'capybara/cucumber'
 require 'webdrivers'
 require 'selenium-webdriver'
 
+Before do |scenario|
+  @url = {:domain => getSiteURL}
+  Capybara.app_host = @url[:domain]
+end
+
+def getSiteURL
+  site = ENV['SITE']
+  stage = ENV['STAGE']
+  case stage
+  when 'dev', 'test', 'live', 'prod'
+    url = $anyini[":#{site}"][":#{stage}"]
+  else
+    # invalid stage
+    raise "invalid STAGE"
+  end
+  return url
+end
+
 def wait_for(seconds)
   # see http://elementalselenium.com/tips/47-waiting
   # sets maximum time to wait, not wait first, then do it
@@ -28,13 +46,6 @@ def check_image(type, type_path)
   end
 end
 
-def what_is(element)
-  puts "\n********************* what is V\n"
-  puts element.inspect
-  puts element['innerHTML']
-  puts "\n********************* what is ^\n"
-end
-
 def sleep_for(sec)
   sleep sec.to_i
 end
@@ -45,7 +56,7 @@ Given("I am testing the correct domain") do
 end
 
 Given("I go to the home page") do
-  visit "#{@url[:domain]}"
+  visit(@url[:domain])
 end
 
 Then /^I go to page "(.*?)"$/ do |sitepage|
