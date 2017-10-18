@@ -1,11 +1,12 @@
 source :rubygems
 
-gem "webdrivers", "~> 3.0"
-gem "selenium-webdriver"
-gem "cucumber"
-gem 'rspec-expectations'
-gem "selenium-cucumber"
 gem "capybara"
-gem "rubyzip"
-gem "poltergeist"
+gem "cucumber"
+gem "inifile"
 gem "phantomjs", :require => 'phantomjs/poltergeist'
+gem "poltergeist"
+gem "rubyzip"
+gem "selenium-cucumber"
+gem "selenium-webdriver"
+gem "webdrivers", "~> 3.0"
+gem 'rspec-expectations'

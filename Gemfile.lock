@@ -42,6 +42,7 @@ GEM
     diff-lcs (1.3)
     ffi (1.9.18)
     gherkin (4.1.3)
+    inifile (3.0.0)
     json (2.1.0)
     mini_mime (0.1.4)
     mini_portile2 (2.3.0)
@@ -98,6 +99,7 @@ PLATFORMS
 DEPENDENCIES
   capybara
   cucumber
+  inifile
   phantomjs
   poltergeist
   rspec-expectations
