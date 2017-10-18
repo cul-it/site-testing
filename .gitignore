@@ -1,2 +1,6 @@
 *.tab
 *.log
+*.swp
+.DS_Store
+capybara-*.html
+test.html
