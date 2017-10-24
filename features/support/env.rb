@@ -63,7 +63,18 @@ else # else create driver instance for desktop browser
       case $headless_type
       when "poltergeist"
         # headless tests with poltergeist/PhantomJS
-        options = {js_errors: true, window_size: [1280, 1024], debug: false,
+        options = {
+          js_errors: true,
+          window_size: [1280, 1024],
+          debug: false,
+          phantomjs_options: [
+            '--proxy-type=none',
+            '--load-images=no',
+            '--ignore-ssl-errors=yes',
+            '--ssl-protocol=any',
+            '--web-security=false',
+            '--debug=false'
+          ]
           }
         Capybara.register_driver :poltergeist do |app|
           Capybara::Poltergeist::Driver.new(app, options)
