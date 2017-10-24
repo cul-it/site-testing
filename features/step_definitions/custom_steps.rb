@@ -50,9 +50,16 @@ def sleep_for(sec)
   sleep sec.to_i
 end
 
+Given("I show the running environment") do
+  puts "Current driver: " + Capybara.current_driver.inspect
+  puts "Javascript driver: " + Capybara.javascript_driver.inspect
+  puts "Current stage: " + ENV['STAGE']
+  puts "Current platform: " + $platform
+end
+
+
 Given("I am testing the correct domain") do
-  what_is(@url)
-  puts "domain: #{@url[:domain]}"
+  puts "Domain: #{@url[:domain]}"
 end
 
 Given("I go to the home page") do
