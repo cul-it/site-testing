@@ -73,7 +73,7 @@ else # else create driver instance for desktop browser
             '--ignore-ssl-errors=yes',
             '--ssl-protocol=any',
             '--web-security=false',
-            '--debug=false'
+            '--debug=true'
           ]
           }
         Capybara.register_driver :poltergeist do |app|
