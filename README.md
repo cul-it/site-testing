@@ -4,7 +4,7 @@ cucumber tests for web sites
 
 ```
 bundle exec cucumber SITE=www.library.cornell.edu STAGE=prod
-bundle exec cucumber SITE=www.library.cornell.edu STAGE=prod HEADLESS=1  HEADLESS\_BROWSER=poltergeist POLTERGEIST_DEBUG=1
+bundle exec cucumber SITE=www.library.cornell.edu STAGE=prod HEADLESS=1  HEADLESS_BROWSER=poltergeist POLTERGEIST_DEBUG=1
 ```
 ## Stages
 
