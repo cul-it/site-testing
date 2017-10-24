@@ -4,7 +4,7 @@ cucumber tests for web sites
 
 ```
 bundle exec cucumber SITE=www.library.cornell.edu STAGE=prod
-bundle exec cucumber SITE=www.library.cornell.edu STAGE=prod HEADLESS=1  HEADLESS_BROWSER=poltergeist
+bundle exec cucumber SITE=www.library.cornell.edu STAGE=prod HEADLESS=1  HEADLESS_BROWSER=poltergeist DEBUG=1
 ```
 ## Stages
 
@@ -19,4 +19,4 @@ These are set up in site-testing.ini
 
 * poltergeist
 * selenium_chrome_headless
-* headless_chrome
+* headless_chrome (default)

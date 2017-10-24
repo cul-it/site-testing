@@ -23,6 +23,7 @@ $os_version = ENV['OS_VERSION']
 $device_name = ENV['DEVICE_NAME']
 $udid = ENV['UDID']
 $app_path = ENV['APP_PATH']
+$debugging = ENV['DEBUG'] || false
 
 # check for valid parameters
 validate_parameters $platform, $browser_type, $app_path
@@ -66,14 +67,14 @@ else # else create driver instance for desktop browser
         options = {
           js_errors: true,
           window_size: [1280, 1024],
-          debug: false,
+          debug: $debugging,
           phantomjs_options: [
             '--proxy-type=none',
             '--load-images=no',
             '--ignore-ssl-errors=yes',
             '--ssl-protocol=any',
             '--web-security=false',
-            '--debug=true'
+            '--debug=' + $debugging,
           ]
           }
         Capybara.register_driver :poltergeist do |app|
