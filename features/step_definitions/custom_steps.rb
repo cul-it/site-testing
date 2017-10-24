@@ -51,6 +51,7 @@ def sleep_for(sec)
 end
 
 Given("I show the running environment") do
+  puts "Hostname: " + Socket.gethostname
   puts "Current driver: " + Capybara.current_driver.inspect
   puts "Javascript driver: " + Capybara.javascript_driver.inspect
   puts "Current stage: " + ENV['STAGE']
