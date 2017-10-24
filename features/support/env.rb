@@ -27,7 +27,7 @@ $app_path = ENV['APP_PATH']
 # check for valid parameters
 validate_parameters $platform, $browser_type, $app_path
 
-Selenium::WebDriver::Chrome.driver_path = $anyini['global']['webdrivers_path']
+#Selenium::WebDriver::Chrome.driver_path = $anyini['global'][':chromedriver_path']
 
 # If platform is android or ios create driver instance for mobile browser
 if $platform == 'android' or $platform == 'iOS'
