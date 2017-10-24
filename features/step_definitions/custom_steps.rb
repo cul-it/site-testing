@@ -56,7 +56,7 @@ Given("I am testing the correct domain") do
 end
 
 Given("I go to the home page") do
-  wait_for(300) {
+  wait_for(2) {
     visit(@url[:domain])
   }
 end
