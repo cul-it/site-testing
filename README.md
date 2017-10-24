@@ -1,11 +1,17 @@
 ## site-testing
 
 cucumber tests for web sites
+These are some variations of the command line:
 
 ```
 bundle exec cucumber SITE=www.library.cornell.edu STAGE=prod
-bundle exec cucumber SITE=www.library.cornell.edu STAGE=prod HEADLESS=1  HEADLESS_BROWSER=poltergeist POLTERGEIST_DEBUG=1
+bundle exec cucumber SITE=www.library.cornell.edu STAGE=dev HEADLESS=1
+bundle exec cucumber SITE=www.library.cornell.edu STAGE=prod HEADLESS=1 HEADLESS_BROWSER=headless_chrome
+bundle exec cucumber SITE=www.library.cornell.edu STAGE=test HEADLESS=1 POLTERGEIST_DEBUG=1
 ```
+
+Add new sites to site-testing.ini
+
 ### Stages
 
 * `dev`
