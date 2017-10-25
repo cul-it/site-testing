@@ -132,7 +132,7 @@ end
 
 When("I wait for the ares spinner to stop") do
   # see https://groups.google.com/d/msg/ruby-capybara/Mz7txv1Sm0U/xBypglg-1roJ
-  wait_for(150) {
+  wait_for(300) {
     expect(page).not_to have_selector('#items-spinner-all-inline', visible: true)
   }
 end
