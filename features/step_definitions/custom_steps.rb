@@ -50,6 +50,33 @@ def sleep_for(sec)
   sleep sec.to_i
 end
 
+# http://ruby-journal.com/how-to-do-jqueryui-autocomplete-with-capybara-2/
+def fill_autocomplete(field, options = {})
+  wait_for(5) {
+    fill_in field, with: options[:with]
+
+    page.execute_script %Q{ $('##{field}').trigger('focus') }
+    page.execute_script %Q{ $('##{field}').trigger('keydown') }
+    selector = %Q{ul.ui-autocomplete li.ui-menu-item a:contains("#{options[:select]}")}
+
+    expect(page).to have_selector('ul.ui-autocomplete li.ui-menu-item a', :visible => false)
+    page.execute_script %Q{ $('#{selector}').trigger('mouseenter').click() }
+  }
+end
+
+# https://github.com/thoughtbot/capybara-webkit/issues/50
+def fill_in_autocomplete(id, value)
+  page.execute_script %Q{$('#{id}').focus().val('#{value}').keydown()}
+  # page.execute_script("document.getElementById('#{id}').setAttribute('value', '#{value}');")
+  # page.execute_script "document.getElementById('#{id}').focus().val('#{value}').keydown()"
+end
+
+# https://github.com/thoughtbot/capybara-webkit/issues/50
+def choose_autocomplete(text)
+  find('ul.ui-autocomplete').should have_content(text)
+  page.execute_script("$('.ui-menu-item:contains(\"#{text}\")').find('a').trigger('mouseenter').click()")
+end
+
 Given("I show the running environment") do
   puts "Hostname: " + Socket.gethostname
   puts "Current driver: " + Capybara.current_driver.inspect
@@ -64,7 +91,7 @@ Given("I am testing the correct domain") do
 end
 
 Given("I go to the home page") do
-  wait_for(2) {
+  wait_for(300) {
     visit(@url[:domain])
   }
 end
@@ -148,12 +175,24 @@ When("I wait for the ares spinner to stop") do
 end
 
 When("I search the catalog for {string}") do |string|
-  page.fill_in 'q', with: string
+#  page.fill_in 'q', with: string
+ page.find(:id, 'q').send_keys(string)
+  # fill_in_autocomplete('q', string)
 end
 
 Then("the catalog search should suggest {string}") do |string|
-  wait_for(60) {
-    expect(page.find(:id, 'ui-id-3').text).to have_content(string)
+  pending # can't figure out how to do this
+  wait_for (10) {
+    find('ul.ui-autocomplete').should have_content(string)
+  }
+end
+
+When("I check the catalog autocomplete for {string}") do |string|
+  pending # can't figure out how to do this
+  wait_for (10) {
+   # expect(page).not_to have_selector('ul.ui-autocomplete', :visible => false)
+    fill_in_autocomplete('q', string)
+    # expect(page).to have_selector('ul.ui-autocomplete', :visible => false)
   }
 end
 
