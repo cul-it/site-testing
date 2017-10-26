@@ -96,6 +96,13 @@ Then /^show me the page$/ do
   puts URI.parse(current_url)
 end
 
+Then /^show me the page after sleeping "(.*?)"$/ do |seconds|
+  sleep_for(seconds)
+  print page.html
+  puts "current url:"
+  puts URI.parse(current_url)
+end
+
 Then /^the page should show content "(.*?)"$/ do |expectedText|
   expect(page).to have_content(expectedText)
 end
