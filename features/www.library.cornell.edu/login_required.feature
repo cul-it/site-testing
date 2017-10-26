@@ -1,16 +1,16 @@
-@login_required
+@www_login_required
 Feature: Login Required Pages
   Background:
     Given I am testing the correct domain
 
-  @login_myaccount
+  @www_login_myaccount
   Scenario: My Account requires CUWebLogin
     Given I go to the home page
       And I click on the "My Account" link
       And I click on the "Login with your NetID or GuestID »" link
     Then I should see the CUWebLogin dialog
 
-  @login_coap_contact
+  @www_login_coap_contact
   Scenario: COAP Contact requires CUWebLogin
     Given I go to the home page
       And I click on the "About Us" link
@@ -20,7 +20,7 @@ Feature: Login Required Pages
       And I click on the "this form" link
     Then I should see the CUWebLogin dialog
 
-  @login_coap_application
+  @www_login_coap_application
   Scenario: COAP Application requires CUWebLogin
     Given I go to the home page
       And I click on the "About Us" link
@@ -29,7 +29,7 @@ Feature: Login Required Pages
       And I click on the "COAP Application for Funding" link
     Then I should see the CUWebLogin dialog
 
-  @test
+  @www_test
   Scenario: I want to test
     Given I go to the home page
     Then I go to page "myacct"
