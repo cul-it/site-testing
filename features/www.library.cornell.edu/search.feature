@@ -1,9 +1,9 @@
-@search
+@www_search
 Feature: Main Search
   Background:
     Given I am testing the correct domain
 
-  @search_autocomplete
+  @www_search_autocomplete
   Scenario Outline: Autocomplete should suggest canned items for common searches
     Given I go to the home page
     When I search the catalog for "<typical>"

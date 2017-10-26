@@ -1,15 +1,15 @@
-@hours
+@www_hours
 Feature: Library Hours
   Background:
     Given I am testing the correct domain
 
-  @hours_find
+  @www_hours_find
   Scenario: Hours page available
     Given I go to the home page
       And I click on the "Libraries and Hours" link
     Then the page title should start with "Libraries and Hours"
 
-  @hours_libraries_listing
+  @www_hours_libraries_listing
   Scenario Outline: All the libraries' hours should be available on the hours page
     Given I visit page "libraries"
       And I should see the hours listing for "<library>" with "<hours-listed>"
