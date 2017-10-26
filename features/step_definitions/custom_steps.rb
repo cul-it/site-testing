@@ -78,8 +78,8 @@ end
 
 When(/I click on the "([^\']+)" link$/) do |linktext|
   wait_for(20) {
-    click_link(linktext)
-#    first(:xpath,"//a[normalize-space()='#{linktext}']").click
+#    click_link(linktext)
+    first(:xpath,"//a[normalize-space()='#{linktext}']").click
   }
 end
 
@@ -91,9 +91,11 @@ Then("I should see the CUWebLogin dialog") do
 end
 
 Then /^show me the page$/ do
-  print page.html
-  puts "current url:"
-  puts URI.parse(current_url)
+  wait_for(300) {
+    print page.html
+    puts "current url:"
+    puts URI.parse(current_url)
+  }
 end
 
 Then /^show me the page after sleeping "(.*?)"$/ do |seconds|
