@@ -78,7 +78,8 @@ end
 
 When(/I click on the "([^\']+)" link$/) do |linktext|
   wait_for(20) {
-    first(:xpath,"//a[normalize-space()='#{linktext}']").click
+    click_link(linktext)
+#    first(:xpath,"//a[normalize-space()='#{linktext}']").click
   }
 end
 
