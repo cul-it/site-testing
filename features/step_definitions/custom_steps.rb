@@ -78,7 +78,8 @@ end
 
 When(/I click on the "([^\']+)" link$/) do |linktext|
   wait_for(20) {
-    first(:xpath,"//a[normalize-space()='#{linktext}']").click
+    click_link(linktext)
+#    first(:xpath,"//a[normalize-space()='#{linktext}']").click
   }
 end
 
@@ -90,6 +91,13 @@ Then("I should see the CUWebLogin dialog") do
 end
 
 Then /^show me the page$/ do
+  print page.html
+  puts "current url:"
+  puts URI.parse(current_url)
+end
+
+Then /^show me the page after sleeping "(.*?)"$/ do |seconds|
+  sleep_for(seconds)
   print page.html
   puts "current url:"
   puts URI.parse(current_url)
@@ -132,7 +140,7 @@ end
 
 When("I wait for the ares spinner to stop") do
   # see https://groups.google.com/d/msg/ruby-capybara/Mz7txv1Sm0U/xBypglg-1roJ
-  wait_for(150) {
+  wait_for(300) {
     expect(page).not_to have_selector('#items-spinner-all-inline', visible: true)
   }
 end
@@ -142,8 +150,8 @@ When("I search the catalog for {string}") do |string|
 end
 
 Then("the catalog search should suggest {string}") do |string|
-  wait_for(5) {
-    expect(page.find(:id, 'ui-id-2').text).to have_content(string)
+  wait_for(60) {
+    expect(page.find(:id, 'ui-id-3').text).to have_content(string)
   }
 end
 
