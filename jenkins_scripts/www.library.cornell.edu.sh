@@ -8,5 +8,5 @@ rvm use ruby-2.2.5
 which bundle
 bundle install
 SITE=www.library.cornell.edu
-bundle exec cucumber SITE="$SITE" STAGE=prod HEADLESS=1 --tags @site_up @ares
-@login_required @hours @search
+bundle exec cucumber SITE="$SITE" STAGE=prod HEADLESS=1 --tags @www_site_up @www_ares
+@www_login_required @www_hours @www_search
