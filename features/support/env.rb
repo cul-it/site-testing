@@ -65,7 +65,7 @@ else # else create driver instance for desktop browser
       when "poltergeist"
         # headless tests with poltergeist/PhantomJS
         options = {
-          js_errors: true,
+          js_errors: false,
           window_size: [1280, 1024],
           debug: false,
           phantomjs_options: [
@@ -108,7 +108,9 @@ else # else create driver instance for desktop browser
         Capybara.javascript_driver = :headless_chrome
       end
     else
-      $driver = Selenium::WebDriver.for(:"#{$browser_type}")
+      $driver = Selenium::WebDriver.for (:"#{$browser_type}")
+      Capybara.default_driver = (:"#{$browser_type}")
+      Capybara.javascript_driver = (:"#{$browser_type}")
       $driver.manage().window().maximize()
     end
 
