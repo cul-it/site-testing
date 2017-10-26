@@ -150,8 +150,8 @@ When("I search the catalog for {string}") do |string|
 end
 
 Then("the catalog search should suggest {string}") do |string|
-  wait_for(5) {
-    expect(page.find(:id, 'ui-id-2').text).to have_content(string)
+  wait_for(60) {
+    expect(page.find(:id, 'ui-id-3').text).to have_content(string)
   }
 end
 
