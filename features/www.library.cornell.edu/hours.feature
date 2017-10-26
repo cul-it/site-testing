@@ -13,7 +13,6 @@ Feature: Library Hours
   Scenario Outline: All the libraries' hours should be available on the hours page
     Given I visit page "libraries"
       And I should see the hours listing for "<library>" with "<hours-listed>"
-      Then show me the page after sleeping "10"
       And I click on the "<library>" link
     Then the page title should start with "<library>"
       And I should see the table of "<library>" hours
