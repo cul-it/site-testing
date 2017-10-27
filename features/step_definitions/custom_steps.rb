@@ -227,3 +227,15 @@ Then("I should see the table of {string} hours") do |string|
   expect(page.find(:xpath, "//td[8]/span")).not_to be_empty
   expect(page.find(:css, "td.s-lc-wh-locname")).to have_content(string)
 end
+
+
+Then("I test") do
+  string = 'Africana Library'
+  xpath = '//a' # works
+  xpath = "//a/h2[text()='#{string}']" #nope
+  xpath = "//a[text()='#{string}']" #yes
+  link = get_href(xpath)
+  what_is(link)
+  visit link
+end
+
