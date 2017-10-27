@@ -50,32 +50,22 @@ def sleep_for(sec)
   sleep sec.to_i
 end
 
-# http://ruby-journal.com/how-to-do-jqueryui-autocomplete-with-capybara-2/
-def fill_autocomplete(field, options = {})
-  wait_for(5) {
-    fill_in field, with: options[:with]
-
-    page.execute_script %Q{ $('##{field}').trigger('focus') }
-    page.execute_script %Q{ $('##{field}').trigger('keydown') }
-    selector = %Q{ul.ui-autocomplete li.ui-menu-item a:contains("#{options[:select]}")}
-
-    expect(page).to have_selector('ul.ui-autocomplete li.ui-menu-item a', :visible => false)
-    page.execute_script %Q{ $('#{selector}').trigger('mouseenter').click() }
-  }
+def click_js(link_text)
+  js = "var link = document.evaluate('//a[contains(.,'" + link_text + "')], document, null, XPathResult.ANY_TYPE, null ); link.click();"
+  what_is(js)
+  page.execute_script(js)
 end
 
-# https://github.com/thoughtbot/capybara-webkit/issues/50
-def fill_in_autocomplete(id, value)
-  page.execute_script %Q{$('#{id}').focus().val('#{value}').keydown()}
-  # page.execute_script("document.getElementById('#{id}').setAttribute('value', '#{value}');")
-  # page.execute_script "document.getElementById('#{id}').focus().val('#{value}').keydown()"
+def get_href(xpath)
+  what_is(xpath)
+  href = page.first(:xpath, xpath, visible: false)[:href]
 end
 
-# https://github.com/thoughtbot/capybara-webkit/issues/50
-def choose_autocomplete(text)
-  find('ul.ui-autocomplete').should have_content(text)
-  page.execute_script("$('.ui-menu-item:contains(\"#{text}\")').find('a').trigger('mouseenter').click()")
-end
+#*******************************************************************************************
+#*******************************************************************************************
+
+#*******************************************************************************************
+#*******************************************************************************************
 
 Given("I show the running environment") do
   puts "Hostname: " + Socket.gethostname
