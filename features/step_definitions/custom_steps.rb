@@ -169,13 +169,16 @@ Then("I select the first option from the ares popup") do
 end
 
 Then("the ares results should contain {string}") do |string|
-  wait_for(300) {
+  wait_for(500) {
     expect(page.find(:xpath, 'id(\'course-reserves-all-inline\')')).to have_content(string)
   }
 end
 
 Then("the page title should start with {string}") do |string|
-  expect(page.title).to start_with(string)
+  wait_for(60) {
+    print page.html
+    expect(page.title).to start_with(string)
+  }
 end
 
 When("I wait for the ares spinner to stop") do
