@@ -1,3 +1,4 @@
+@www
 @www_hours
 Feature: Library Hours
   Background:
@@ -6,14 +7,14 @@ Feature: Library Hours
   @www_hours_find
   Scenario: Hours page available
     Given I go to the home page
-      And I click on the "Libraries and Hours" link
+      And I click on the 'Libraries and Hours' link
     Then the page title should start with "Libraries and Hours"
 
   @www_hours_libraries_listing
   Scenario Outline: All the libraries' hours should be available on the hours page
     Given I visit page "libraries"
       And I should see the hours listing for "<library>" with "<hours-listed>"
-      And I click on the "<library>" link
+      And I click on the <library> library link
     Then the page title should start with "<library>"
       And I should see the table of "<library>" hours
 
@@ -41,3 +42,16 @@ Feature: Library Hours
       | Uris Library | true |
       | Veterinary Library | true |
 
+
+  @www_hours_libraries_test
+  Scenario Outline: All the libraries' hours should be available on the hours page
+    Given I visit page "libraries"
+      And I should see the hours listing for "<library>" with "<hours-listed>"
+      And I click on the "<library>" library link
+    Then the page title should start with "<library>"
+      And I should see the table of "<library>" hours
+
+
+    Examples:
+      | library | hours-listed |
+      | Africana Library | true |
