@@ -257,4 +257,8 @@ Given("I select {string} from popup {string}") do |string, string2|
   page.select string, from: string2
 end
 
+Given("I enter test email question into {string} with sequence {string} and tag {string}") do |string, string2, string3|
+  fill_in("#{string}", :with => "This is a TEST EMAIL from a web form on www.library.cornell.edu. If you see this message, please forward the entire email to us at cul-web-test-confirm@cornell.edu so we'll know the web form email is working. After that, please delete it so no one else is bothered. Thanks. -JGReidy [webform-email-test;#{string2};#{string3}]")
+end
+
 end
