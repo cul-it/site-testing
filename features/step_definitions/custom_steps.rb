@@ -249,4 +249,12 @@ When("I do not see complaints about javascript") do
   expect(page).not_to have_content('enable')
 end
 
+Given("I enter {string} for field {string}") do |string, string2|
+  fill_in(string2, :with => string)
+end
+
+Given("I select {string} from popup {string}") do |string, string2|
+  page.select string, from: string2
+end
+
 end
