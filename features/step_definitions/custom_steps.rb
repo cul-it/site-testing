@@ -242,3 +242,11 @@ end
 Given /^PENDING/ do
   pending
 end
+
+When("I do not see complaints about javascript") do
+  expect(page).not_to have_css('div.antibot-no-js')
+  expect(page).not_to have_content('Javascript')
+  expect(page).not_to have_content('enable')
+end
+
+end
