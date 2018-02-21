@@ -1,3 +1,4 @@
+@www
 @www_login_required
 Feature: Login Required Pages
   Background:

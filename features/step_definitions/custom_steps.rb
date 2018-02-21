@@ -50,6 +50,23 @@ def sleep_for(sec)
   sleep sec.to_i
 end
 
+def click_js(link_text)
+  js = "var link = document.evaluate('//a[contains(.,'" + link_text + "')], document, null, XPathResult.ANY_TYPE, null ); link.click();"
+  what_is(js)
+  page.execute_script(js)
+end
+
+def get_href(xpath)
+  what_is(xpath)
+  href = page.first(:xpath, xpath, visible: false)[:href]
+end
+
+#*******************************************************************************************
+#*******************************************************************************************
+
+#*******************************************************************************************
+#*******************************************************************************************
+
 Given("I show the running environment") do
   puts "Hostname: " + Socket.gethostname
   puts "Current driver: " + Capybara.current_driver.inspect
@@ -64,7 +81,7 @@ Given("I am testing the correct domain") do
 end
 
 Given("I go to the home page") do
-  wait_for(2) {
+  wait_for(300) {
     visit(@url[:domain])
   }
 end
@@ -76,10 +93,31 @@ Then /^I go to page "(.*?)"$/ do |sitepage|
   }
 end
 
-When(/I click on the "([^\']+)" link$/) do |linktext|
-  wait_for(20) {
-#    click_link(linktext)
-    first(:xpath,"//a[normalize-space()='#{linktext}']").click
+Then("I click on the {string} link") do |string|
+ wait_for(300) {
+  #expect(page).to have_link('', text: string)
+  click_link(string)
+  }
+end
+
+Then("I click on the {string} library link") do |string|
+  # - warning: string has commas in it for some reason
+  # commas went away when I reomved the single quote from the feature call
+  # '<library>' -> <library>
+ wait_for(10) {
+  # these links are hidden to poltergeist
+  # https://github.com/thoughtbot/capybara-webkit/issues/494
+  xpath = %q{//a[text()='#{string}']}
+  page = get_href(xpath);
+  visit page
+  # element = page.find(:xpath,"//a/h2[text()='#{string}']", visible: false)
+  # page.driver.browser.execute_script("arguments[0].click()", element.native)
+  # element.click
+  # what_is(element)
+  # within (page.find(:xpath,"//a/h2[text()='#{string}']").find(:xpath, '../../..')) {
+  #   element = find(:xpath, "//a/h2", visible: false)
+  #   page.driver.browser.execute_script("arguments[0].click()", element.native)
+  # }
   }
 end
 
@@ -131,13 +169,16 @@ Then("I select the first option from the ares popup") do
 end
 
 Then("the ares results should contain {string}") do |string|
-  wait_for(300) {
+  wait_for(500) {
     expect(page.find(:xpath, 'id(\'course-reserves-all-inline\')')).to have_content(string)
   }
 end
 
 Then("the page title should start with {string}") do |string|
-  expect(page.title).to start_with(string)
+  wait_for(60) {
+    print page.html
+    expect(page.title).to start_with(string)
+  }
 end
 
 When("I wait for the ares spinner to stop") do
@@ -148,12 +189,24 @@ When("I wait for the ares spinner to stop") do
 end
 
 When("I search the catalog for {string}") do |string|
-  page.fill_in 'q', with: string
+#  page.fill_in 'q', with: string
+ page.find(:id, 'q').send_keys(string)
+  # fill_in_autocomplete('q', string)
 end
 
 Then("the catalog search should suggest {string}") do |string|
-  wait_for(60) {
-    expect(page.find(:id, 'ui-id-3').text).to have_content(string)
+  pending # can't figure out how to do this
+  wait_for (10) {
+    find('ul.ui-autocomplete').should have_content(string)
+  }
+end
+
+When("I check the catalog autocomplete for {string}") do |string|
+  pending # can't figure out how to do this
+  wait_for (10) {
+   # expect(page).not_to have_selector('ul.ui-autocomplete', :visible => false)
+    fill_in_autocomplete('q', string)
+    # expect(page).to have_selector('ul.ui-autocomplete', :visible => false)
   }
 end
 
@@ -173,4 +226,70 @@ Then("I should see the table of {string} hours") do |string|
   expect(page.find(:xpath, "//table/caption")).to have_content('Display of Opening hours')
   expect(page.find(:xpath, "//td[8]/span")).not_to be_empty
   expect(page.find(:css, "td.s-lc-wh-locname")).to have_content(string)
+end
+
+
+Then("I test") do
+  string = 'Africana Library'
+  xpath = '//a' # works
+  xpath = "//a/h2[text()='#{string}']" #nope
+  xpath = "//a[text()='#{string}']" #yes
+  link = get_href(xpath)
+  what_is(link)
+  visit link
+end
+
+Given /^PENDING/ do
+  pending
+end
+
+When("I do not see complaints about javascript") do
+  expect(page).not_to have_css('div.antibot-no-js')
+  expect(page).not_to have_content('Javascript')
+  expect(page).not_to have_content('enable')
+end
+
+Given("I enter {string} for field {string}") do |string, string2|
+  fill_in(string2, :with => string)
+end
+
+Given("I select {string} from popup {string}") do |string, string2|
+  page.select string, from: string2
+end
+
+Given("I enter test email question into {string} with sequence {string} and tag {string}") do |string, string2, string3|
+  fill_in("#{string}", :with => "This is a TEST EMAIL from a web form on www.library.cornell.edu. If you see this message, please forward the entire email to us at cul-web-test-confirm@cornell.edu so we'll know the web form email is working. After that, please delete it so no one else is bothered. Thanks. -JGReidy [webform-email-test;#{string2};#{string3}]")
+end
+
+Then("I hit Submit") do
+  # https://www.drupal.org/project/webform/issues/2906236
+  # Honeypot complains if it took less than 5 sconds to fill out the form
+  sleep_for(6)
+  click_button("Submit")
+end
+
+Then("I submit by hitting button {string}") do |string|
+  # https://www.drupal.org/project/webform/issues/2906236
+  # Honeypot complains if it took less than 5 sconds to fill out the form
+  sleep_for(6)
+  click_button(string)
+end
+
+Then ("I should not see a problem with submission message") do
+  # Honeypot complaint
+  wait_for(15) {
+    expect(page).not_to have_content("problem with your form submission")
+  }
+end
+
+Then ("I should see a thank you message") do
+  wait_for(15) {
+    expect(page.find(:css, "div.alert-success")).to have_content("Thank you")
+  }
+end
+
+Then ("I should see a webform confirmation message") do
+  wait_for(15) {
+    expect(page.find(:css, "div.webform-confirmation")).to have_content("Thank you")
+  }
 end

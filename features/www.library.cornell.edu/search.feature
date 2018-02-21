@@ -1,3 +1,4 @@
+@www
 @www_search
 Feature: Main Search
   Background:
