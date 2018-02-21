@@ -239,3 +239,6 @@ Then("I test") do
   visit link
 end
 
+Given /^PENDING/ do
+  pending
+end
