@@ -261,4 +261,18 @@ Given("I enter test email question into {string} with sequence {string} and tag 
   fill_in("#{string}", :with => "This is a TEST EMAIL from a web form on www.library.cornell.edu. If you see this message, please forward the entire email to us at cul-web-test-confirm@cornell.edu so we'll know the web form email is working. After that, please delete it so no one else is bothered. Thanks. -JGReidy [webform-email-test;#{string2};#{string3}]")
 end
 
+Then("I hit Submit") do
+  # https://www.drupal.org/project/webform/issues/2906236
+  # Honeypot complains if it took less than 5 sconds to fill out the form
+  sleep_for(6)
+  click_button("Submit")
+end
+
+Then("I submit by hitting button {string}") do |string|
+  # https://www.drupal.org/project/webform/issues/2906236
+  # Honeypot complains if it took less than 5 sconds to fill out the form
+  sleep_for(6)
+  click_button(string)
+end
+
 end
