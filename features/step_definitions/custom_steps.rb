@@ -275,4 +275,10 @@ Then("I submit by hitting button {string}") do |string|
   click_button(string)
 end
 
+Then ("I should not see a problem with submission message") do
+  # Honeypot complaint
+  wait_for(15) {
+    expect(page).not_to have_content("problem with your form submission")
+  }
+end
 end
