@@ -101,7 +101,7 @@ Then("I click on the {string} link") do |string|
 end
 
 Then("I click on the {string} library link") do |string|
-  - warning: string has commas in it for some reason
+  # - warning: string has commas in it for some reason
   # commas went away when I reomved the single quote from the feature call
   # '<library>' -> <library>
  wait_for(10) {
