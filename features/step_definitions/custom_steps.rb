@@ -281,4 +281,15 @@ Then ("I should not see a problem with submission message") do
     expect(page).not_to have_content("problem with your form submission")
   }
 end
+
+Then ("I should see a thank you message") do
+  wait_for(15) {
+    expect(page.find(:css, "div.alert-success")).to have_content("Thank you")
+  }
+end
+
+Then ("I should see a webform confirmation message") do
+  wait_for(15) {
+    expect(page.find(:css, "div.webform-confirmation")).to have_content("Thank you")
+  }
 end
