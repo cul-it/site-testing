@@ -41,3 +41,10 @@ Feature: Main Search
       | vetref | Veterinary Library |
       | infodesk_med | Weill Cornell Medical Library (New York City |
       | askalibrarian_qatar_med | Weill Cornell Medical College-Qatar, Distributed eLibrary |
+
+  @www_formtest
+  @www_formtest_email_us
+  # https://www.library.cornell.edu/ask/email
+  Scenario Outline: Ask a Librarian form email test
+  Given I visit page "ask/email"
+      And I do not see complaints about javascript
