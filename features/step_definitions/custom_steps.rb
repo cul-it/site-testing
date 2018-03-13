@@ -293,3 +293,35 @@ Then ("I should see a webform confirmation message") do
     expect(page.find(:css, "div.webform-confirmation")).to have_content("Thank you")
   }
 end
+
+Then ("I use site {string} and stage {string}") do |string,string2|
+  pending # can't figure out how to do this
+  url = $anyini[":#{string}"][":#{string2}"]
+  @url = {:domain => url}
+  Capybara.app_host = @url[:domain]
+end
+
+Then("I log in with SAML") do
+  wait_for(15) {
+    target = "#{@url[:domain]}" + "/saml_login"
+    visit target
+    fill_in "netid", with: ENV["NETID"]
+    fill_in "password", with: ENV["PASS"] 
+    click_button("Login")
+    page.driver.within_frame('duo_iframe') do
+      print page.html
+      page.find(:css, "div.device-select-wrapper select").select("Android (xxx-xxx-8595)")
+      click_button("Send Me a Push")
+    end
+  }
+end
+
+Then("user {string} is logged in") do |string|
+  wait_for(15) {
+    expect(page.find_by_id("toolbar-user")).to have_content(string)
+  }
+end
+
+Then("I change the SMTP user") do
+  page.find_by_id('search_box').send_keys "AKIAJD5ITLFLNISJE34Q"
+end
