@@ -61,8 +61,11 @@ def get_href(xpath)
   href = page.first(:xpath, xpath, visible: false)[:href]
 end
 
-def getTestMark()
-  return Digest::MD5.hexdigest 'Cornell University Library IT Testing'
+def getTestMark(*args)
+  hasher = Digest::MD5.new
+  hasher << 'Cornell University Library IT Testing'
+  args.each { |arg| hasher << arg }
+  return hasher.hexdigest
 end
 
 #*******************************************************************************************
@@ -292,6 +295,12 @@ Then ("I should see a thank you message") do
   }
 end
 
+Then ("I should see a confirmation message") do
+  wait_for(15) {
+    expect(page.find(:css, "div.webform-confirmation")).to have_content("Thank you")
+  }
+end
+
 Then ("I should see a webform confirmation message") do
   wait_for(15) {
     expect(page.find(:css, "div.webform-confirmation")).to have_content("Thank you")
@@ -337,9 +346,30 @@ Given("I show site, form, and recipient {string}") do |string|
 end
 
 Given("I enter test text into {string} for user {string}") do |string, string2|
-  text = "This is a TEST EMAIL from a web form on " + ENV['SITE'] + '\n'
-  text += "The form is " + page.title + '\n'
-  text += "Located here: " + URI.parse(current_url).to_s + '\n'
-  text += "Test: " + getTestMark + '\n'
-  fill_in("#{string}", :with => text)
+  text = "***\n"
+  text += "This is a TEST EMAIL from a web form on " + ENV['SITE'] + "\n"
+  text += "Form Name: " + page.title + "\n"
+  text += "Form URL: " + URI.parse(current_url).to_s + "\n"
+  text += "Recipient: " + string2 + "\n"
+  text += "CUL-IT Tests: " + getTestMark() + "\n"
+  text += "Campaign: " + "Periodic submissions for email gap detection.\n"
+  text += "Form: " + getTestMark(ENV['SITE'], page.title) + "\n"
+  text += "Run: " + getTestMark(ENV['SITE'], page.title, string2) + "\n"
+  wait_for(5) {
+    fill_in("#{string}", :with => text)
+  }
+end
+
+Then("show me id {string}") do |string|
+  what_is(page.find_by_id(string))
+end
+
+Then("test hashing") do
+  puts getTestMark
+  puts getTestMark("apple")
+  puts getTestMark("orange")
+  puts getTestMark("1","1")
+  puts getTestMark("1","2")
+  puts getTestMark("1","1","1")
+  puts getTestMark("1","1","2")
 end
