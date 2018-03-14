@@ -346,9 +346,18 @@ Given("I show site, form, and recipient {string}") do |string|
 end
 
 Given("I enter test text into {string} for user {string}") do |string, string2|
-  text = "This is a TEST EMAIL from a web form on " + ENV['SITE'] + '\n'
-  text += "The form is " + page.title + '\n'
-  text += "Located here: " + URI.parse(current_url).to_s + '\n'
-  text += "Test: " + getTestMark + '\n'
-  fill_in("#{string}", :with => text)
+  text = "***\n"
+  text += "This is a TEST EMAIL from a web form on " + ENV['SITE'] + "\n"
+  text += "Form Name: " + page.title + "\n"
+  text += "Form URL: " + URI.parse(current_url).to_s + "\n"
+  text += "Recipient: " + string2 + "\n"
+  text += "CUL-IT Tests: " + getTestMark() + "\n"
+  text += "Campaign: " + "Periodic submissions for email gap detection.\n"
+  text += "Form: " + getTestMark(ENV['SITE'], page.title) + "\n"
+  text += "Run: " + getTestMark(ENV['SITE'], page.title, string2) + "\n"
+  wait_for(5) {
+    fill_in("#{string}", :with => text)
+  }
+end
+
 end
