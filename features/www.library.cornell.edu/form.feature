@@ -47,4 +47,15 @@ Feature: Main Search
   # https://www.library.cornell.edu/ask/email
   Scenario Outline: Ask a Librarian form email test
   Given I visit page "ask/email"
-      And I do not see complaints about javascript
+    And I do not see complaints about javascript
+    And I show site, form, and recipient "<recipient>"
+    And I enter "CUL IT Testing" for field "edit-submitted-name"
+    And I enter "cul-web-test-confirm@cornell.edu" for field "edit-submitted-your-email-address"
+    And I select "Cornell Staff" from popup "edit-submitted-status"
+    And I select "<recipient>" from popup "edit-submitted-library"
+    And I enter test text into "edit-submitted-your-question" for user "<elist>"  
+    
+    Examples:
+      | recipient | elist |
+      | Adelson Library (Lab of Ornithology) | adelson_lib@cornell.edu |
+      | Africana Library | africana_library@cornell.edu |
