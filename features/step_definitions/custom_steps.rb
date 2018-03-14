@@ -295,6 +295,12 @@ Then ("I should see a thank you message") do
   }
 end
 
+Then ("I should see a confirmation message") do
+  wait_for(15) {
+    expect(page.find(:css, "div.webform-confirmation")).to have_content("Thank you")
+  }
+end
+
 Then ("I should see a webform confirmation message") do
   wait_for(15) {
     expect(page.find(:css, "div.webform-confirmation")).to have_content("Thank you")
