@@ -61,6 +61,10 @@ def get_href(xpath)
   href = page.first(:xpath, xpath, visible: false)[:href]
 end
 
+def getTestMark()
+  return Digest::MD5.hexdigest 'Cornell University Library IT Testing'
+end
+
 #*******************************************************************************************
 #*******************************************************************************************
 
