@@ -351,8 +351,8 @@ Given("I enter test text into {string} for user {string}") do |string, string2|
   text += "Form Name: " + page.title + "\n"
   text += "Form URL: " + URI.parse(current_url).to_s + "\n"
   text += "Recipient: " + string2 + "\n"
+  text += "Test Campaign: " + "Periodic submissions for email gap detection.\n"
   text += "CUL-IT Tests: " + getTestMark() + "\n"
-  text += "Campaign: " + "Periodic submissions for email gap detection.\n"
   text += "Form: " + getTestMark(ENV['SITE'], page.title) + "\n"
   text += "Run: " + getTestMark(ENV['SITE'], page.title, string2) + "\n"
   wait_for(5) {
