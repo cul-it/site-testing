@@ -61,6 +61,10 @@ def get_href(xpath)
   href = page.first(:xpath, xpath, visible: false)[:href]
 end
 
+def getTestMark()
+  return Digest::MD5.hexdigest 'Cornell University Library IT Testing'
+end
+
 #*******************************************************************************************
 #*******************************************************************************************
 
@@ -324,4 +328,18 @@ end
 
 Then("I change the SMTP user") do
   page.find_by_id('search_box').send_keys "AKIAJD5ITLFLNISJE34Q"
+end
+
+Given("I show site, form, and recipient {string}") do |string|
+  puts "Site: " + ENV['SITE'] + " Stage: " + ENV['STAGE']
+  puts "Form: " + page.title
+  puts "Recipient: " + string
+end
+
+Given("I enter test text into {string} for user {string}") do |string, string2|
+  text = "This is a TEST EMAIL from a web form on " + ENV['SITE'] + '\n'
+  text += "The form is " + page.title + '\n'
+  text += "Located here: " + URI.parse(current_url).to_s + '\n'
+  text += "Test: " + getTestMark + '\n'
+  fill_in("#{string}", :with => text)
 end
