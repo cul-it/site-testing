@@ -360,4 +360,16 @@ Given("I enter test text into {string} for user {string}") do |string, string2|
   }
 end
 
+Then("show me id {string}") do |string|
+  what_is(page.find_by_id(string))
+end
+
+Then("test hashing") do
+  puts getTestMark
+  puts getTestMark("apple")
+  puts getTestMark("orange")
+  puts getTestMark("1","1")
+  puts getTestMark("1","2")
+  puts getTestMark("1","1","1")
+  puts getTestMark("1","1","2")
 end
