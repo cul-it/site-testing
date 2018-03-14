@@ -59,3 +59,15 @@ Feature: Main Search
       | recipient | elist |
       | Adelson Library (Lab of Ornithology) | adelson_lib@cornell.edu |
       | Africana Library | africana_library@cornell.edu |
+
+  @www_formtest
+  @www_formtest_email_test_form
+  # https://www.library.cornell.edu/email-test-form-message-only
+  Scenario: Check the content of the generated email test
+  Given I visit page "email-test-form-message-only"
+    And I do not see complaints about javascript
+    And I enter test text into "edit-submitted-message" for user "Lester Tester"
+    And I hit Submit
+  Then I should not see a problem with submission message
+    And I should see a confirmation message
+    
