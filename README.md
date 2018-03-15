@@ -62,3 +62,14 @@ under Advanced Settings and check off
 ```
 ☑︎ Locally cache tracking code file
 ```
+
+### Antibot problem
+
+The Antibot module checks for javascript - be sure the diver supports it.
+
+### Honeypot problem
+
+https://www.drupal.org/project/webform/issues/2906236
+Honeypot complains if it took less than 5 sconds to fill out the form.
+The 5 seconds is configurable, so you may need to adjust per site.
+
