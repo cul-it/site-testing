@@ -19,7 +19,7 @@ STAGE ()
 HEADLESS ()
 HEADLESS_BROWSER (0)
 POLTERGEIST_DEBUG (0)
-NOSUBMIT (0) - 1: do not click the submit button on forms
+SUBMIT (0) - 1: click the submit button on forms
 ```
 
 ### Stages
