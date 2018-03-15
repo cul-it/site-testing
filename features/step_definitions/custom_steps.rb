@@ -378,3 +378,11 @@ Then("test hashing") do
   puts getTestMark("1","1","1")
   puts getTestMark("1","1","2")
 end
+
+Given("I check off {string}") do |string|
+  check(string)
+end
+
+Given("I uncheck {string}") do |string|
+  uncheck(string)
+end
