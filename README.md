@@ -12,6 +12,16 @@ bundle exec cucumber SITE=www.library.cornell.edu STAGE=test HEADLESS=1 POLTERGE
 
 Add new sites to site-testing.ini
 
+### Arguments (default)
+```
+SITE ()
+STAGE ()
+HEADLESS ()
+HEADLESS_BROWSER (0)
+POLTERGEIST_DEBUG (0)
+NOSUBMIT (0) - 1: do not click the submit button on forms
+```
+
 ### Stages
 
 * `dev`
@@ -26,6 +36,7 @@ These are set up in site-testing.ini
 * `poltergeist` (default)
 * `selenium_chrome_headless`
 * `headless_chrome`
+
 
 ### Piwik problem
 
