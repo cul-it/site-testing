@@ -269,42 +269,46 @@ Given("I enter test email question into {string} with sequence {string} and tag 
 end
 
 Then("I hit Submit") do
-  # https://www.drupal.org/project/webform/issues/2906236
-  # Honeypot complains if it took less than 5 sconds to fill out the form
-  sleep_for(6)
-  click_button("Submit")
+  if ENV['SUBMIT'] == '1' 
+    # https://www.drupal.org/project/webform/issues/2906236
+    # Honeypot complains if it took less than 5 sconds to fill out the form
+    sleep_for(6)
+    click_button("Submit")
+  end
 end
 
 Then("I submit by hitting button {string}") do |string|
   # https://www.drupal.org/project/webform/issues/2906236
   # Honeypot complains if it took less than 5 sconds to fill out the form
-  sleep_for(6)
-  click_button(string)
+  if ENV['SUBMIT'] == '1' 
+    sleep_for(6)
+    click_button(string)
+  end
 end
 
 Then ("I should not see a problem with submission message") do
-  # Honeypot complaint
-  wait_for(15) {
-    expect(page).not_to have_content("problem with your form submission")
-  }
+  if ENV['SUBMIT'] == 1 
+    # Honeypot complaint
+    wait_for(15) {
+      expect(page).not_to have_content("problem with your form submission")
+    }
+  end
 end
 
 Then ("I should see a thank you message") do
-  wait_for(15) {
-    expect(page.find(:css, "div.alert-success")).to have_content("Thank you")
-  }
-end
-
-Then ("I should see a confirmation message") do
-  wait_for(15) {
-    expect(page.find(:css, "div.webform-confirmation")).to have_content("Thank you")
-  }
+  if ENV['SUBMIT'] == 1 
+    wait_for(15) {
+      expect(page.find(:css, "div.alert-success")).to have_content("Thank you")
+    }
+  end
 end
 
 Then ("I should see a webform confirmation message") do
-  wait_for(15) {
-    expect(page.find(:css, "div.webform-confirmation")).to have_content("Thank you")
-  }
+  if ENV['SUBMIT'] == 1 
+    wait_for(15) {
+      expect(page.find(:css, "div.webform-confirmation")).to have_content("Thank you")
+    }
+  end
 end
 
 Then ("I use site {string} and stage {string}") do |string,string2|
