@@ -349,18 +349,19 @@ Given("I show site, form, and recipient {string}") do |string|
   puts "Recipient: " + string
 end
 
-Given("I enter test text into {string} for user {string}") do |string, string2|
-  text = "***\n"
-  text += "This is a TEST EMAIL from a web form on " + ENV['SITE'] + "\n"
-  text += "Form Name: " + page.title + "\n"
-  text += "Form URL: " + URI.parse(current_url).to_s + "\n"
-  text += "Recipient: " + string2 + "\n"
-  text += "Test Campaign: " + "Periodic submissions for email gap detection.\n"
-  text += "CUL-IT Tests: " + getTestMark() + "\n"
-  text += "Form: " + getTestMark(ENV['SITE'], page.title) + "\n"
-  text += "Run: " + getTestMark(ENV['SITE'], page.title, string2) + "\n"
+Given("I enter periodic test text into {string} for user {string}") do |string, string2|
+  text = Array.new
+  text << "This is a TEST EMAIL from a web form on " + ENV['SITE']
+  text << "See https://confluence.cornell.edu/x/e8AcFQ"
+  text << "Form Name: " + page.title
+  text << "Form URL: " + URI.parse(current_url).to_s
+  text << "Recipient: " + string2
+  text << "Test Campaign: " + "Periodic_submissions_for_email_gap_detection."
+  text << "CUL-IT Tests: " + getTestMark()
+  text << "Form: " + getTestMark(ENV['SITE'], page.title)
+  text << "Run: " + getTestMark(ENV['SITE'], page.title, string2)
   wait_for(5) {
-    fill_in("#{string}", :with => text)
+    fill_in("#{string}", :with => text.join("\n"))
   }
 end
 
