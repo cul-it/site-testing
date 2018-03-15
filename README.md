@@ -12,6 +12,16 @@ bundle exec cucumber SITE=www.library.cornell.edu STAGE=test HEADLESS=1 POLTERGE
 
 Add new sites to site-testing.ini
 
+### Arguments (default)
+```
+SITE ()
+STAGE ()
+HEADLESS ()
+HEADLESS_BROWSER (0)
+POLTERGEIST_DEBUG (0)
+SUBMIT (0) - 1: click the submit button on forms
+```
+
 ### Stages
 
 * `dev`
@@ -26,6 +36,7 @@ These are set up in site-testing.ini
 * `poltergeist` (default)
 * `selenium_chrome_headless`
 * `headless_chrome`
+
 
 ### Piwik problem
 
@@ -51,3 +62,14 @@ under Advanced Settings and check off
 ```
 ☑︎ Locally cache tracking code file
 ```
+
+### Antibot problem
+
+The Antibot module checks for javascript - be sure the diver supports it.
+
+### Honeypot problem
+
+https://www.drupal.org/project/webform/issues/2906236
+Honeypot complains if it took less than 5 sconds to fill out the form.
+The 5 seconds is configurable, so you may need to adjust per site.
+
