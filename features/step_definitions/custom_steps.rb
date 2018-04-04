@@ -19,6 +19,12 @@ def getSiteURL
   case stage
   when 'dev', 'test', 'live', 'prod'
     url = $anyini[":#{site}"][":#{stage}"]
+  when 'ares'
+    if site == 'music.library.cornell.edu'
+      url = $anyini[":#{site}"][":#{stage}"]
+    else
+      raise "invalid STAGE for this site"
+    end
   else
     # invalid stage
     raise "invalid STAGE"
