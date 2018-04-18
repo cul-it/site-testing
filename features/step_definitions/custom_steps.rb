@@ -53,7 +53,7 @@ def check_image(type, type_path)
 end
 
 def sleep_for(sec)
-  sleep sec.to_i
+  sleep(sec.to_f)
 end
 
 def click_js(link_text)
@@ -187,9 +187,50 @@ Then("the ares results should contain {string}") do |string|
   }
 end
 
+Then("I select the first option from the d8_ares popup") do
+  wait_for(5) {
+    page.find('#edit-course-select').find(:xpath, 'option[1]').select_option
+  }
+end
+
+Given("I select option {int} from the d8_ares popup") do |int|
+  wait_for(5) {
+    page.find('#edit-course-select').find(:xpath, "option[#{int}]").select_option
+  }
+end
+
+Then("I wait for the d8_ares results to load") do
+  sleep_for(6)
+  wait_for(300) {
+    expect(page).not_to have_content('Loading reserve list ...')
+  }
+end
+
+Then("the d8_ares results should show at least one title") do
+  wait_for(10) {
+    page.first('p.title')
+  }
+end
+
+Then("show me the d8_ares results") do 
+  what_is(page.find_by_id('reserve-list'))
+end
+
+
+Given("I select course {string} from the d8_ares popup") do |string|
+  wait_for(5) {
+    page.find('#edit-course-select').find('option', text: /#{string}?/i).select_option
+  }
+end
+
+Then("the d8_ares results should show {string}") do |string|
+  wait_for(10) {
+    page.first('td.ares-title p strong', text: /#{string}?/i)
+  }
+end
+
 Then("the page title should start with {string}") do |string|
   wait_for(60) {
-    print page.html
     expect(page.title).to start_with(string)
   }
 end
