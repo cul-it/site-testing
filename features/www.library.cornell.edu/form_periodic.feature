@@ -109,7 +109,7 @@ Feature: Periodic Form Submissions To Track Emails
     And I enter "cul-web-test-confirm@cornell.edu" for field "edit-submitted-my-email-address"
     And I select "Testing EGA" from popup "edit-submitted-target-list"
     And I enter "Periodic Testing email with Email Test Form" for field "edit-submitted-subject"
-    And I enter "Periodic test from @webform_periodic_submission" for field "edit-submitted-message"
+    And I enter periodic test text into "edit-submitted-message" for user "Testing EGA"
     And I hit Submit
   Then I should not see a problem with submission message
     And I should see a thank you message
