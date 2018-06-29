@@ -103,6 +103,7 @@ Feature: Periodic Form Submissions To Track Emails
 
   @webform_periodic_submission
   Scenario: Send a test email to the test form
+  Given I am testing domain "https://www.library.cornell.edu"
   Given I visit page "email-test-form"
     And I do not see complaints about javascript
     And I enter "cul-web-test-confirm@cornell.edu" for field "edit-submitted-my-email-address"

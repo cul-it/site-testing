@@ -93,6 +93,10 @@ Given("I am testing the correct domain") do
   puts "Domain: #{@url[:domain]}"
 end
 
+Given("I am testing domain {string}") do |string|
+  expect(string).to be == "#{@url[:domain]}"
+end
+
 Given("I go to the home page") do
   wait_for(300) {
     visit(@url[:domain])
