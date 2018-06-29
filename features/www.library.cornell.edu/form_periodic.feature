@@ -110,6 +110,7 @@ Feature: Periodic Form Submissions To Track Emails
     And I select "Testing EGA" from popup "edit-submitted-target-list"
     And I enter "Periodic Testing email with Email Test Form" for field "edit-submitted-subject"
     And I enter periodic test text into "edit-submitted-message" for user "Testing EGA"
+    Then I take a screen shot with file name "TestForm"
     And I hit Submit
   Then I should not see a problem with submission message
     And I should see a thank you message

@@ -74,11 +74,19 @@ def getTestMark(*args)
   return hasher.hexdigest
 end
 
+def take_screenshot_with_file_name(file_name, message)
+  page.save_screenshot("#{file_name}.png", :full => true)
+end
+
 #*******************************************************************************************
 #*******************************************************************************************
 
 #*******************************************************************************************
 #*******************************************************************************************
+
+Then("I take a screen shot with file name {string}") do |string|
+  take_screenshot_with_file_name(string, "ScreenShot")
+end
 
 Given("I show the running environment") do
   puts "Hostname: " + Socket.gethostname
