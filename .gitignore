@@ -4,3 +4,4 @@
 .DS_Store
 capybara-*.html
 test.html
+*.png
