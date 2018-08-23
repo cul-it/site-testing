@@ -445,3 +445,9 @@ end
 Given("I uncheck {string}") do |string|
   uncheck(string)
 end
+
+Then /^I should see a Submit button labeled "(.*?)"$/ do |string|
+  wait_for(5) {
+    expect(page.find(:css, "button.webform-submit")).to have_content(string)
+  }
+end
