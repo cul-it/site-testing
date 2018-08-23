@@ -41,3 +41,32 @@ Feature: Main Search
       | vetref | Veterinary Library |
       | infodesk_med | Weill Cornell Medical Library (New York City |
       | askalibrarian_qatar_med | Weill Cornell Medical College-Qatar, Distributed eLibrary |
+
+  @www_forms_available
+  Scenario Outline: Assure that each of the public webforms are available to users
+    Given I visit page "<formpage>"
+    Then I should see a Submit button labeled "<label>"
+
+  Examples:
+    | formpage | label |
+    | research/consultation | Submit |
+    # | services/request/recommend | Submit |
+    | still-not-able-connect | Send to selected library |
+    | 2cul-columbia-library-patron-borrowing-application | Submit |
+    | research/citation/help | Submit |
+    # | about/collections/coap/application | Submit |
+    # | about/collections/coap/contact/form | Submit |
+    | services/systematic-review | Submit |
+    | ask/email | Submit |
+    # | exhibits-form | Submit |
+    | services/borrow/library-card | Submit |
+    # | about/news/library-insider/recommendation | Submit |
+    # | help/trouble-connecting/onsite | Submit |
+    | services/instruction/request | Submit |
+    | research/consultation | Submit |
+    | feedback | Send Mail |
+    | sparktalks/contact | Submit |
+    | still-not-able-connect | Send to selected library |
+    | summon-feedback | Submit |
+    | reserves/textbook-request-form | Submit |
+    | about/collections/visual-resources/help | Submit |    
