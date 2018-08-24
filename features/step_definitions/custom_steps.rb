@@ -466,3 +466,10 @@ Then("I make jQuery load the page") do
     end
   }
 end
+
+Then("there should not be a user logged in") do
+  patiently do
+    # this same css path shows user name if logged in
+    expect(page.find(:css, 'div#maincontent.row.primary-wrapper h1')).to have_content("User account")
+  end
+end
