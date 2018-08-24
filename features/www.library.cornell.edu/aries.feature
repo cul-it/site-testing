@@ -10,7 +10,6 @@ Feature: ares course reserves
     Given I go to the home page
     When I visit page "ares/search"
       And I search ares for "PSYCH 1101"
-      And I wait for the ares spinner to stop
     Then the ares results should contain "Uris Library Reserve"
 
   @www_ares_popup
