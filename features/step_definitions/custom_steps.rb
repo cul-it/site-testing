@@ -194,9 +194,9 @@ Then("I select the first option from the ares popup") do
 end
 
 Then("the ares results should contain {string}") do |string|
-  wait_for(500) {
-    expect(page.find(:xpath, 'id(\'course-reserves-all-inline\')')).to have_content(string)
-  }
+  patiently do
+    expect(page.find(:css, 'table#course-reserves-all-inline')).to have_content(string)
+  end
 end
 
 Then("I select the first option from the d8_ares popup") do
@@ -228,6 +228,12 @@ Then("show me the d8_ares results") do
   what_is(page.find_by_id('reserve-list'))
 end
 
+Then("show me the ares results") do 
+  patiently do
+    what_is(page.find_by_id('course-reserves-all-inline'))
+  end
+end
+
 
 Given("I select course {string} from the d8_ares popup") do |string|
   wait_for(5) {
@@ -249,6 +255,7 @@ end
 
 When("I wait for the ares spinner to stop") do
   # see https://groups.google.com/d/msg/ruby-capybara/Mz7txv1Sm0U/xBypglg-1roJ
+  sleep_for(6)
   wait_for(300) {
     expect(page).not_to have_selector('#items-spinner-all-inline', visible: true)
   }
