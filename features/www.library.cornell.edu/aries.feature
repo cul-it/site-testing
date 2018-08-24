@@ -1,5 +1,6 @@
 @www
 @www_ares
+@javascript
 Feature: ares course reserves
   Background:
     Given I am testing the correct domain
@@ -8,9 +9,9 @@ Feature: ares course reserves
   Scenario: Load Ares cache for the other commands
     Given I go to the home page
     When I visit page "ares/search"
-      And I search ares for "PSYCH 1101"
-      And I wait for the ares spinner to stop
-    Then the ares results should contain "Uris Library Reserve"
+      And I search ares for "PSYCH"
+      And I make jQuery load the page
+    Then the ares results should contain "Mann Library Reserve"
 
   @www_ares_popup
   Scenario: Check the autofill function of the front page popup

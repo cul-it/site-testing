@@ -194,9 +194,9 @@ Then("I select the first option from the ares popup") do
 end
 
 Then("the ares results should contain {string}") do |string|
-  wait_for(500) {
-    expect(page.find(:xpath, 'id(\'course-reserves-all-inline\')')).to have_content(string)
-  }
+  patiently do
+    expect(page.find(:css, 'table#course-reserves-all-inline')).to have_content(string)
+  end
 end
 
 Then("I select the first option from the d8_ares popup") do
@@ -228,6 +228,12 @@ Then("show me the d8_ares results") do
   what_is(page.find_by_id('reserve-list'))
 end
 
+Then("show me the ares results") do 
+  patiently do
+    what_is(page.find_by_id('course-reserves-all-inline'))
+  end
+end
+
 
 Given("I select course {string} from the d8_ares popup") do |string|
   wait_for(5) {
@@ -249,6 +255,7 @@ end
 
 When("I wait for the ares spinner to stop") do
   # see https://groups.google.com/d/msg/ruby-capybara/Mz7txv1Sm0U/xBypglg-1roJ
+  sleep_for(6)
   wait_for(300) {
     expect(page).not_to have_selector('#items-spinner-all-inline', visible: true)
   }
@@ -450,4 +457,19 @@ Then /^I should see a Submit button labeled "(.*?)"$/ do |string|
   wait_for(5) {
     expect(page.find(:css, "button.webform-submit")).to have_content(string)
   }
+end
+
+Then("I make jQuery load the page") do
+  wait_for(200) {
+    patiently do
+      expect(page.find(:css, 'table#course-reserves-all-inline')).not_to be_empty
+    end
+  }
+end
+
+Then("there should not be a user logged in") do
+  patiently do
+    # this same css path shows user name if logged in
+    expect(page.find(:css, 'div#maincontent.row.primary-wrapper h1')).to have_content("User account")
+  end
 end
