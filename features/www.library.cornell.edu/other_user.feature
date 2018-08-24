@@ -6,8 +6,8 @@ Feature: Logged in as another user
 
   @www_other_user
   Scenario: I should not be logged in at all
-    Given I go to the home page
-    When I click on the "Staff login" link
+    Given I visit page "user"
+    Then there should not be a user logged in
     Then the page should show content "Log In"
     Then the page should show content "Cornell users"
     Then the page should show content "Username *"
