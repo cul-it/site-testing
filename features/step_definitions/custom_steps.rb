@@ -458,3 +458,11 @@ Then /^I should see a Submit button labeled "(.*?)"$/ do |string|
     expect(page.find(:css, "button.webform-submit")).to have_content(string)
   }
 end
+
+Then("I make jQuery load the page") do
+  wait_for(200) {
+    patiently do
+      expect(page.find(:css, 'table#course-reserves-all-inline')).not_to be_empty
+    end
+  }
+end
