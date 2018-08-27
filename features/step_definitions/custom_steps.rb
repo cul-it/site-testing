@@ -125,6 +125,12 @@ Then("I click on the {string} link") do |string|
    }
 end
 
+Then("I click on the {string} menu item") do |string|
+patiently do
+  first('.menu').click_link(string)
+  end
+end
+  
 Then("I click on the {string} library link") do |string|
   # - warning: string has commas in it for some reason
   # commas went away when I reomved the single quote from the feature call
