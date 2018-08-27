@@ -119,10 +119,10 @@ Then /^I go to page "(.*?)"$/ do |sitepage|
 end
 
 Then("I click on the {string} link") do |string|
- wait_for(300) {
-  #expect(page).to have_link('', text: string)
-  click_link(string)
-  }
+  wait_for(300) {
+   #expect(page).to have_link('', text: string)
+   click_link(string)
+   }
 end
 
 Then("I click on the {string} library link") do |string|
