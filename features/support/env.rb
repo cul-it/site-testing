@@ -68,6 +68,7 @@ else # else create driver instance for desktop browser
       when "poltergeist"
         # headless tests with poltergeist/PhantomJS
         options = {
+          phantomjs: Phantomjs.path,
           timeout: 30,
           js_errors: false,
           window_size: [1280, 1024],
@@ -82,7 +83,7 @@ else # else create driver instance for desktop browser
           ]
           }
         Capybara.register_driver :poltergeist do |app|
-          Capybara::Poltergeist::Driver.new(app, :phantomjs => Phantomjs.path, options)
+          Capybara::Poltergeist::Driver.new(app, options)
         end
         Capybara.default_driver    = :poltergeist
         Capybara.javascript_driver = :poltergeist
