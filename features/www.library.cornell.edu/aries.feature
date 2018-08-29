@@ -2,7 +2,6 @@
 @www_ares
 Feature: ares course reserves
   Background:
-    PENDING: can't get js to load the ares content!!!
     Given I am testing the correct domain
 
   @www_ares_load

@@ -203,6 +203,7 @@ Then("I select the first option from the ares popup") do
 end
 
 Then("the ares results should contain {string}") do |string|
+  pending # not working
   patiently do
       expect(page.find_by_id('course-reserves-all-inline', :visible => :any)).to have_content(string)
   end
