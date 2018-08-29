@@ -1,8 +1,8 @@
 @www
 @www_ares
-@javascript
 Feature: ares course reserves
   Background:
+    PENDING: can't get js to load the ares content!!!
     Given I am testing the correct domain
 
   @www_ares_load
@@ -10,7 +10,8 @@ Feature: ares course reserves
     Given I go to the home page
     When I visit page "ares/search"
       And I search ares for "PSYCH"
-      And I make jQuery load the page
+      And I wait for the d8_ares results to load
+      Then show me id "course-reserves-all-inline"
     Then the ares results should contain "Mann Library Reserve"
 
   @www_ares_popup
