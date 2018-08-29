@@ -6,6 +6,7 @@ require 'inifile'
 require 'cucumber_priority'
 require 'spreewald/web_steps'
 require "selenium/webdriver"
+require "phantomjs"
 
 def what_is(element)
   puts "\n********************* what is V\n"
