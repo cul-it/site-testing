@@ -82,7 +82,7 @@ else # else create driver instance for desktop browser
           ]
           }
         Capybara.register_driver :poltergeist do |app|
-          Capybara::Poltergeist::Driver.new(app, options)
+          Capybara::Poltergeist::Driver.new(app, :phantomjs => Phantomjs.path, options)
         end
         Capybara.default_driver    = :poltergeist
         Capybara.javascript_driver = :poltergeist
