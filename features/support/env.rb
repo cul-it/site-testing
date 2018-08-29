@@ -68,6 +68,7 @@ else # else create driver instance for desktop browser
       when "poltergeist"
         # headless tests with poltergeist/PhantomJS
         options = {
+          timeout: 1.minute,
           js_errors: false,
           window_size: [1280, 1024],
           debug: false,
