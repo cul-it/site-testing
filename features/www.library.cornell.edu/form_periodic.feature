@@ -3,6 +3,7 @@
 @form_periodic
 Feature: Periodic Form Submissions To Track Emails
   Background:
+    Given PENDING: spam prevention
     Given I am testing the correct domain
 
   @www_form_periodic_email_test_form

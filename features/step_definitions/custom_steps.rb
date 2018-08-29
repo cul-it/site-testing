@@ -119,22 +119,31 @@ Then /^I go to page "(.*?)"$/ do |sitepage|
 end
 
 Then("I click on the {string} link") do |string|
- wait_for(300) {
-  #expect(page).to have_link('', text: string)
-  click_link(string)
-  }
+  wait_for(300) {
+   #expect(page).to have_link('', text: string)
+   click_link(string)
+   }
 end
 
-Then("I click on the {string} library link") do |string|
+Then("I click on the {string} menu item") do |string|
+patiently do
+  first('.menu').click_link(string)
+  end
+end
+  
+Then /^I click on the "(.*?)" library link$/ do |string|
+  patiently do
+    what_is(page.find(:xpath,"//h2[text()=\"#{string}\"]"))
+  end
   # - warning: string has commas in it for some reason
   # commas went away when I reomved the single quote from the feature call
   # '<library>' -> <library>
- wait_for(10) {
+ #wait_for(10) {
   # these links are hidden to poltergeist
   # https://github.com/thoughtbot/capybara-webkit/issues/494
-  xpath = %q{//a[text()='#{string}']}
-  page = get_href(xpath);
-  visit page
+  #xpath = %q{//a[text()='#{string}']}
+  #page = get_href(xpath);
+  #visit page
   # element = page.find(:xpath,"//a/h2[text()='#{string}']", visible: false)
   # page.driver.browser.execute_script("arguments[0].click()", element.native)
   # element.click
@@ -143,7 +152,7 @@ Then("I click on the {string} library link") do |string|
   #   element = find(:xpath, "//a/h2", visible: false)
   #   page.driver.browser.execute_script("arguments[0].click()", element.native)
   # }
-  }
+  #}
 end
 
 Then("I should see the CUWebLogin dialog") do
