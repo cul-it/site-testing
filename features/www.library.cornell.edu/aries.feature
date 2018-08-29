@@ -3,7 +3,6 @@
 @javascript
 Feature: ares course reserves
   Background:
-    Given PENDING: temporarily
     Given I am testing the correct domain
 
   @www_ares_load
