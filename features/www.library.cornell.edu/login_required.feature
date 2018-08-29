@@ -7,27 +7,29 @@ Feature: Login Required Pages
   @www_login_myaccount
   Scenario: My Account requires CUWebLogin
     Given I go to the home page
-      And I click on the "My Account" link
-      And I click on the "Login with your NetID or GuestID »" link
+      And I click on the "My Account" menu item
+      And I click on the "Login with your NetID" link
     Then I should see the CUWebLogin dialog
 
   @www_login_coap_contact
   Scenario: COAP Contact requires CUWebLogin
     Given I go to the home page
-      And I click on the "About Us" link
+      And I click on the "About Us" menu item
       And I click on the "subject librarians" link
       And I click on the "Cornell Open Access Publication Fund" link
       And I click on the "COAP Contact" link
       And I click on the "this form" link
+      And I click on the "Login" link
     Then I should see the CUWebLogin dialog
 
   @www_login_coap_application
   Scenario: COAP Application requires CUWebLogin
     Given I go to the home page
-      And I click on the "About Us" link
+      And I click on the "About Us" menu item
       And I click on the "subject librarians" link
       And I click on the "Cornell Open Access Publication Fund" link
       And I click on the "COAP Application for Funding" link
+      And I click on the "Login" link
     Then I should see the CUWebLogin dialog
 
   @www_test
