@@ -204,7 +204,7 @@ end
 
 Then("the ares results should contain {string}") do |string|
   patiently do
-    expect(page.find(:css, 'table#course-reserves-all-inline')).to have_content(string)
+      expect(page.find_by_id('course-reserves-all-inline', :visible => :any)).to have_content(string)
   end
 end
 
@@ -441,7 +441,7 @@ Given("I enter periodic test text into {string} for user {string}") do |string, 
 end
 
 Then("show me id {string}") do |string|
-  what_is(page.find_by_id(string))
+  what_is(page.find_by_id(string, :visible => :all))
 end
 
 Then("test hashing") do
