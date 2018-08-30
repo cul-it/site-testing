@@ -133,7 +133,7 @@ end
   
 Then /^I click on the "(.*?)" library link$/ do |string|
   patiently do
-    what_is(page.find(:xpath,"//h2[text()=\"#{string}\"]"))
+    page.find(:xpath,"//a/h2[text()='#{string}']").click
   end
   # - warning: string has commas in it for some reason
   # commas went away when I reomved the single quote from the feature call
