@@ -263,6 +263,12 @@ Then("the page title should start with {string}") do |string|
   }
 end
 
+Then("the page should contain headline {string}") do |string|
+  patiently do
+    expect(page.first(:xpath, "//h1[text()='#{string}']"))
+  end
+end
+
 When("I wait for the ares spinner to stop") do
   # see https://groups.google.com/d/msg/ruby-capybara/Mz7txv1Sm0U/xBypglg-1roJ
   sleep_for(6)
