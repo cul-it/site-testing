@@ -310,11 +310,23 @@ Then("I should see the hours listing for {string} with {string}") do |string, st
   end
 end
 
-Then("I should see the table of {string} hours") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
-  expect(page.find(:xpath, "//table/caption")).to have_content('Display of Opening hours')
-  expect(page.find(:xpath, "//td[8]/span")).not_to be_empty
-  expect(page.find(:css, "td.s-lc-wh-locname")).to have_content(string)
+Then("I should see the table of {string} hours with row {string}") do |string, string2|
+  case string2
+  when 'false'
+    # do nothing
+  when 'library'
+    patiently do
+      expect(page.first(:xpath, "//td[text()='#{string}']")).to have_content(string)
+    end
+  when 'library-link'
+    patiently do
+      expect(page.first(:xpath, "//td/a[text()='#{string}']")).to have_content(string)
+    end
+  else
+    patiently do
+      expect(page.first(:xpath, "//td[text()='#{string2}']")).to have_content(string2)
+    end 
+  end
 end
 
 
