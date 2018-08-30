@@ -133,7 +133,7 @@ end
   
 Then /^I click on the "(.*?)" library link$/ do |string|
   patiently do
-    what_is(page.find(:xpath,"//h2[text()=\"#{string}\"]"))
+    page.find(:xpath,"//a/h2[text()='#{string}']").click
   end
   # - warning: string has commas in it for some reason
   # commas went away when I reomved the single quote from the feature call
@@ -263,6 +263,12 @@ Then("the page title should start with {string}") do |string|
   }
 end
 
+Then("the page should contain headline {string}") do |string|
+  patiently do
+    expect(page.first(:xpath, "//h1[text()='#{string}']"))
+  end
+end
+
 When("I wait for the ares spinner to stop") do
   # see https://groups.google.com/d/msg/ruby-capybara/Mz7txv1Sm0U/xBypglg-1roJ
   sleep_for(6)
@@ -294,29 +300,48 @@ When("I check the catalog autocomplete for {string}") do |string|
 end
 
 Then("I should see the hours listing for {string} with {string}") do |string, string2|
-  wait_for(5) {
+  patiently do
     within(page.find(:xpath,"//a/h2[text()='#{string}']").find(:xpath, '../../..')) {
       if string2 == true
         expect(find(".today-hours").text).not_to be_empty
       end
-      check_image(:css, '.library-thumbnail img')
+      #check_image(:css, '.library-thumbnail img')
     }
-  }
+  end
 end
 
-Then("I should see the table of {string} hours") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
-  expect(page.find(:xpath, "//table/caption")).to have_content('Display of Opening hours')
-  expect(page.find(:xpath, "//td[8]/span")).not_to be_empty
-  expect(page.find(:css, "td.s-lc-wh-locname")).to have_content(string)
+Then("I should see the table of {string} hours with row {string}") do |string, string2|
+  case string2
+  when 'false'
+    # do nothing
+  when 'library'
+    patiently do
+      expect(page.first(:xpath, "//td[text()='#{string}']")).to have_content(string)
+    end
+  when 'library-link'
+    patiently do
+      expect(page.first(:xpath, "//td/a[text()='#{string}']")).to have_content(string)
+    end
+  else
+    patiently do
+      expect(page.first(:xpath, "//td[text()='#{string2}']")).to have_content(string2)
+    end 
+  end
 end
 
 
 Then("I test") do
+  # /html/body/div[3]/div/div[2]/div/section[2]/div/div[2]/div/div[1]
+  # /html/body/div[3]/div/div[2]/div/section[2]/div/div[2]/div/div[1]/span/div/div[2]/a/h2
   string = 'Africana Library'
   xpath = '//a' # works
   xpath = "//a/h2[text()='#{string}']" #nope
   xpath = "//a[text()='#{string}']" #yes
+  xpath = "/html/body/div[3]/div/div[2]/div/section[2]/div/div[2]/div/div[1]"
+  xpath = "/html/body/div[3]/div/div[2]/div/section[2]/div/div[2]/div/div[1]/span/div/div[2]/a/h2"
+  css = ".view-content > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a:nth-child(1) > h2:nth-child(1)"
+  css = "a h2"
+  what_is(page.find(:css, css))
   link = get_href(xpath)
   what_is(link)
   visit link
