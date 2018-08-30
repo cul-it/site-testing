@@ -305,7 +305,7 @@ Then("I should see the hours listing for {string} with {string}") do |string, st
       if string2 == true
         expect(find(".today-hours").text).not_to be_empty
       end
-      check_image(:css, '.library-thumbnail img')
+      #check_image(:css, '.library-thumbnail img')
     }
   }
 end
