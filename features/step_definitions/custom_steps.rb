@@ -331,10 +331,17 @@ end
 
 
 Then("I test") do
+  # /html/body/div[3]/div/div[2]/div/section[2]/div/div[2]/div/div[1]
+  # /html/body/div[3]/div/div[2]/div/section[2]/div/div[2]/div/div[1]/span/div/div[2]/a/h2
   string = 'Africana Library'
   xpath = '//a' # works
   xpath = "//a/h2[text()='#{string}']" #nope
   xpath = "//a[text()='#{string}']" #yes
+  xpath = "/html/body/div[3]/div/div[2]/div/section[2]/div/div[2]/div/div[1]"
+  xpath = "/html/body/div[3]/div/div[2]/div/section[2]/div/div[2]/div/div[1]/span/div/div[2]/a/h2"
+  css = ".view-content > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a:nth-child(1) > h2:nth-child(1)"
+  css = "a h2"
+  what_is(page.find(:css, css))
   link = get_href(xpath)
   what_is(link)
   visit link
