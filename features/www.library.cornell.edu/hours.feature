@@ -14,32 +14,31 @@ Feature: Library Hours
   Scenario Outline: All the libraries' hours should be available on the hours page
     Given I visit page "libraries"
       And I should see the hours listing for "<library>" with "<hours-listed>"
-      Then show me the page
       And I click on the "<library>" library link
-    Then the page title should start with "<library>"
-      And I should see the table of "<library>" hours
+    Then the page should contain headline "<library>"
+      And I should see the table of "<library>" hours with row "<hours-table-row>"
 
 
     Examples:
-      | library | hours-listed |
-      | Africana Library | true |
-      | Engineering Library | true |
-      | Fine Arts Library | true |
-      | Industrial and Labor Relations Library | true |
-      | Kroch Library, Division of Asia Collections | true |
-      | Kroch Library, Division of Rare & Manuscript Collections | true |
-      | Law Library | true |
-      | Library Annex | true |
-      | Management Library | true |
-      | Mann Library | true |
-      | Mathematics Library | true |
-      | Medical Center Archives | false |
-      | Medical Library | false |
-      | Music Library | true |
-      | Olin Library | true |
-      | Ornithology Library | true |
-      | Physical Sciences Library (Edna McConnell Clark Library) | true |
-      | School of Hotel Administration Library | true |
-      | Uris Library | true |
-      | Veterinary Library | true |
+      | library | hours-listed | hours-table-row |
+      | Africana Library | true | library |
+      | Engineering Library | true | false |
+      | Fine Arts Library | true | library |
+      | Industrial and Labor Relations Library | true | library |
+      | Kroch Library, Division of Asia Collections | true | library |
+      | Kroch Library, Division of Rare & Manuscript Collections | true | library |
+      | Law Library | true | Law Circulation |
+      | Library Annex | true | library |
+      | Management Library | true | Circulation Desk |
+      | Mann Library | true | library-link |
+      | Mathematics Library | true | library |
+      | Medical Center Archives | false | false |
+      | Medical Library | false | false |
+      | Music Library | true | library |
+      | Olin Library | true | library |
+      | Ornithology Library | true | library |
+      | Physical Sciences Library (Edna McConnell Clark Library) | true | false |
+      | School of Hotel Administration Library | true | Hotel School Library |
+      | Uris Library | true | library |
+      | Veterinary Library | true | library |
 
