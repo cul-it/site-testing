@@ -300,14 +300,14 @@ When("I check the catalog autocomplete for {string}") do |string|
 end
 
 Then("I should see the hours listing for {string} with {string}") do |string, string2|
-  wait_for(5) {
+  patiently do
     within(page.find(:xpath,"//a/h2[text()='#{string}']").find(:xpath, '../../..')) {
       if string2 == true
         expect(find(".today-hours").text).not_to be_empty
       end
       #check_image(:css, '.library-thumbnail img')
     }
-  }
+  end
 end
 
 Then("I should see the table of {string} hours") do |string|
