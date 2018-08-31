@@ -6,5 +6,7 @@ Feature: Test anything
 
   @debugging_hidden_links
   Scenario: The web site has links hidden to poltergiest
-    Given I visit page "libraries"
-    Then I test
+    When I visit page "ares/search"
+      And I search ares for "PSYCH"
+    Then the ares results should contain "Mann Library Reserve"
+

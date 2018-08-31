@@ -204,7 +204,9 @@ end
 
 Then("the ares results should contain {string}") do |string|
   pending # not working
+  wait_for_ajax
   patiently do
+    what_is(page.find_by_id('course-reserves-all-inline', :visible => :any))
       expect(page.find_by_id('course-reserves-all-inline', :visible => :any)).to have_content(string)
   end
 end
