@@ -510,3 +510,9 @@ Then("there should not be a user logged in") do
     expect(page.find(:css, 'div#maincontent.row.primary-wrapper h1')).to have_content("User account")
   end
 end
+
+Then("I should see the Staff login link") do
+  patiently do
+    expect(page.find_by_id('login')).to have_content("Staff login")
+  end
+end
