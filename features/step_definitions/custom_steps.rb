@@ -106,9 +106,9 @@ Given("I am testing domain {string}") do |string|
 end
 
 Given("I go to the home page") do
-  wait_for(300) {
+  patiently do
     visit(@url[:domain])
-  }
+  end
 end
 
 Then /^I go to page "(.*?)"$/ do |sitepage|
@@ -204,7 +204,9 @@ end
 
 Then("the ares results should contain {string}") do |string|
   pending # not working
+  wait_for_ajax
   patiently do
+    what_is(page.find_by_id('course-reserves-all-inline', :visible => :any))
       expect(page.find_by_id('course-reserves-all-inline', :visible => :any)).to have_content(string)
   end
 end
@@ -506,5 +508,11 @@ Then("there should not be a user logged in") do
   patiently do
     # this same css path shows user name if logged in
     expect(page.find(:css, 'div#maincontent.row.primary-wrapper h1')).to have_content("User account")
+  end
+end
+
+Then("I should see the Staff login link") do
+  patiently do
+    expect(page.find_by_id('login')).to have_content("Staff login")
   end
 end
