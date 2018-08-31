@@ -106,9 +106,9 @@ Given("I am testing domain {string}") do |string|
 end
 
 Given("I go to the home page") do
-  wait_for(300) {
+  patiently do
     visit(@url[:domain])
-  }
+  end
 end
 
 Then /^I go to page "(.*?)"$/ do |sitepage|
