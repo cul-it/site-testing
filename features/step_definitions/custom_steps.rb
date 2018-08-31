@@ -513,6 +513,6 @@ end
 
 Then("I should see the Staff login link") do
   patiently do
-    expect(page.find_by_id('login')).to have_content("Staff login")
+    expect(page.find(:css, 'section#block-block-46 ul.menu.nav li a')).to have_content("Staff login")
   end
 end
