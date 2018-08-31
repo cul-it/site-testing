@@ -12,3 +12,8 @@ Feature: Logged in as another user
     Then the page should show content "Cornell users"
     Then the page should show content "Username *"
     Then the page should show content "Password *"
+
+  @www_front_login_link
+  Scenario: The front page should show Staff login not logout
+    Given I go to the home page
+    Then I should see the Staff login link
