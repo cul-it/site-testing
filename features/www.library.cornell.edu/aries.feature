@@ -2,6 +2,7 @@
 @www_ares
 Feature: ares course reserves
   Background:
+    Given PENDING # ares javascript not working
     Given I am testing the correct domain
 
   @www_ares_load
