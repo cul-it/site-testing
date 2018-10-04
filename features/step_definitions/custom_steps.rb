@@ -203,12 +203,10 @@ Then("I select the first option from the ares popup") do
 end
 
 Then("the ares results should contain {string}") do |string|
-  pending # not working
-  wait_for_ajax
   patiently do
-    what_is(page.find_by_id('course-reserves-all-inline', :visible => :any))
-      expect(page.find_by_id('course-reserves-all-inline', :visible => :any)).to have_content(string)
-  end
+    expect(page.find_by_id('course-reserves-all-inline', :visible => :any)).to have_content(string)
+    #what_is(page.find_by_id('course-reserves-all-inline', :visible => :any))
+    end
 end
 
 Then("I select the first option from the d8_ares popup") do
@@ -273,10 +271,9 @@ end
 
 When("I wait for the ares spinner to stop") do
   # see https://groups.google.com/d/msg/ruby-capybara/Mz7txv1Sm0U/xBypglg-1roJ
-  sleep_for(6)
-  wait_for(300) {
+  patiently do
     expect(page).not_to have_selector('#items-spinner-all-inline', visible: true)
-  }
+  end
 end
 
 When("I search the catalog for {string}") do |string|
