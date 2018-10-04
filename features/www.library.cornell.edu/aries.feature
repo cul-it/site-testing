@@ -1,8 +1,9 @@
 @www
 @www_ares
+@javascript
+
 Feature: ares course reserves
   Background:
-    Given PENDING # ares javascript not working
     Given I am testing the correct domain
 
   @www_ares_load
@@ -10,6 +11,7 @@ Feature: ares course reserves
     Given I go to the home page
     When I visit page "ares/search"
       And I search ares for "PSYCH"
+      And I wait for the ares spinner to stop
     Then the ares results should contain "Mann Library Reserve"
 
   @www_ares_popup
