@@ -15,3 +15,4 @@ Feature: Periodic Form Submissions To Track Emails
     And I hit Submit
   Then I should not see a problem with submission message
     And I should see a thank you message
+    Then I take a screen shot with file name "TestFormSubmitted"
