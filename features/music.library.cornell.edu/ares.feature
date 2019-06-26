@@ -6,6 +6,7 @@ Feature: ares course reserves
 
   @music_ares_load
   Scenario: Load Ares cache for the other commands
+    Given PENDING : ares results not working
     Given I go to the home page
     When I visit page "course-reserves"
       And I select option 1 from the d8_ares popup
@@ -14,6 +15,7 @@ Feature: ares course reserves
 
   @music_ares_front
   Scenario: Selecting ares item on front page shows results on course-reserves page
+    Given PENDING : ares results not working
     Given I go to the home page
       And I select option 3 from the d8_ares popup
       And I wait for the d8_ares results to load
@@ -23,6 +25,7 @@ Feature: ares course reserves
 
   @music_ares_course_reserves
   Scenario Outline: Selecting various course reserves should show appropriate results
+    Given PENDING : ares results not working
     Given I visit page "course-reserves"
     And I select course "<course>" from the d8_ares popup
     And I wait for the d8_ares results to load

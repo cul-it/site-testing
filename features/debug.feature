@@ -4,9 +4,11 @@ Feature: Test anything
     Given I show the running environment
     And I am testing the correct domain
 
+  @javascript
   @debugging_hidden_links
   Scenario: The web site has links hidden to poltergiest
+    Given PENDING : ares results not working
     When I visit page "ares/search"
-      And I search ares for "PSYCH"
-    Then the ares results should contain "Mann Library Reserve"
+      And I search ares for "permanent"
+    Then the ares results should contain "Introductory statistical mechanics"
 

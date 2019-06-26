@@ -7,7 +7,7 @@ Feature: Library Hours
   @www_hours_find
   Scenario: Hours page available
     Given I go to the home page
-      And I click on the 'Libraries and Hours' link
+      And I click on the first 'Libraries and Hours' link
     Then the page title should start with "Libraries and Hours"
 
   @www_hours_libraries_listing
@@ -21,6 +21,7 @@ Feature: Library Hours
 
     Examples:
       | library | hours-listed | hours-table-row |
+      | Adelson Library | true | Ornithology Library |
       | Africana Library | true | library |
       | Engineering Library | true | false |
       | Fine Arts Library | true | library |
@@ -36,7 +37,6 @@ Feature: Library Hours
       | Medical Library | false | false |
       | Music Library | true | library |
       | Olin Library | true | library |
-      | Ornithology Library | true | library |
       | Physical Sciences Library (Edna McConnell Clark Library) | true | false |
       | School of Hotel Administration Library | true | Hotel School Library |
       | Uris Library | true | library |
