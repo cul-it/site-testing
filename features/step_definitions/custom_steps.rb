@@ -125,12 +125,18 @@ Then("I click on the {string} link") do |string|
    }
 end
 
+Then("I click on the first {string} link") do |string|
+  wait_for(300) {
+    page.first('a', text: /#{string}?/i).click()
+   }
+end
+
 Then("I click on the {string} menu item") do |string|
 patiently do
   first('.menu').click_link(string)
   end
 end
-  
+
 Then /^I click on the "(.*?)" library link$/ do |string|
   patiently do
     page.find(:xpath,"//a/h2[text()='#{string}']").click
