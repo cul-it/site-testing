@@ -3,7 +3,8 @@
 Feature: Periodic Form Submissions To Track Emails
   Background:
     Given I am testing the correct domain
- Scenario: Send a test email to the test form
+ Scenario: Send a test email to the test form 2
+  Given PENDING : avoid
   Given I am testing domain "https://www.library.cornell.edu"
   Given I visit page "email-test-form"
     And I do not see complaints about javascript
