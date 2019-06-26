@@ -514,7 +514,5 @@ Then("there should not be a user logged in") do
 end
 
 Then("I should see the Staff login link") do
-  patiently do
-    expect(page.find(:css, 'section#block-block-46 ul.menu.nav li a')).to have_content("Staff login")
-  end
+  expect(page.first(:xpath, "//a[text()='Staff login']"))
 end
