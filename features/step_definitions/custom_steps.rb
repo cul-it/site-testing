@@ -211,7 +211,6 @@ end
 Then("the ares results should contain {string}") do |string|
   patiently do
     expect(page.find_by_id('course-reserves-all-inline', :visible => :any)).to have_content(string)
-    #what_is(page.find_by_id('course-reserves-all-inline', :visible => :any))
     end
 end
 
@@ -240,11 +239,11 @@ Then("the d8_ares results should show at least one title") do
   }
 end
 
-Then("show me the d8_ares results") do 
+Then("show me the d8_ares results") do
   what_is(page.find_by_id('reserve-list'))
 end
 
-Then("show me the ares results") do 
+Then("show me the ares results") do
   patiently do
     what_is(page.find_by_id('course-reserves-all-inline'))
   end
@@ -330,7 +329,7 @@ Then("I should see the table of {string} hours with row {string}") do |string, s
   else
     patiently do
       expect(page.first(:xpath, "//td[text()='#{string2}']")).to have_content(string2)
-    end 
+    end
   end
 end
 
@@ -375,7 +374,7 @@ Given("I enter test email question into {string} with sequence {string} and tag 
 end
 
 Then("I hit Submit") do
-  if ENV['SUBMIT'] == '1' 
+  if ENV['SUBMIT'] == '1'
     # https://www.drupal.org/project/webform/issues/2906236
     # Honeypot complains if it took less than 5 sconds to fill out the form
     sleep_for(6)
@@ -386,14 +385,14 @@ end
 Then("I submit by hitting button {string}") do |string|
   # https://www.drupal.org/project/webform/issues/2906236
   # Honeypot complains if it took less than 5 sconds to fill out the form
-  if ENV['SUBMIT'] == '1' 
+  if ENV['SUBMIT'] == '1'
     sleep_for(6)
     click_button(string)
   end
 end
 
 Then ("I should not see a problem with submission message") do
-  if ENV['SUBMIT'] == 1 
+  if ENV['SUBMIT'] == 1
     # Honeypot complaint
     wait_for(15) {
       expect(page).not_to have_content("problem with your form submission")
@@ -402,7 +401,7 @@ Then ("I should not see a problem with submission message") do
 end
 
 Then ("I should see a thank you message") do
-  if ENV['SUBMIT'] == 1 
+  if ENV['SUBMIT'] == 1
     wait_for(15) {
       expect(page.find(:css, "div.alert-success")).to have_content("Thank you")
     }
@@ -410,7 +409,7 @@ Then ("I should see a thank you message") do
 end
 
 Then ("I should see a webform confirmation message") do
-  if ENV['SUBMIT'] == 1 
+  if ENV['SUBMIT'] == 1
     wait_for(15) {
       expect(page.find(:css, "div.webform-confirmation")).to have_content("Thank you")
     }
@@ -429,7 +428,7 @@ Then("I log in with SAML") do
     target = "#{@url[:domain]}" + "/saml_login"
     visit target
     fill_in "netid", with: ENV["NETID"]
-    fill_in "password", with: ENV["PASS"] 
+    fill_in "password", with: ENV["PASS"]
     click_button("Login")
     page.driver.within_frame('duo_iframe') do
       print page.html
