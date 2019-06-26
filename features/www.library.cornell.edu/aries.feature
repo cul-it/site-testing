@@ -8,6 +8,7 @@ Feature: ares course reserves
 
   @www_ares_load
   Scenario: Load Ares cache for the other commands
+    Given PENDING : ares results not working
     Given I go to the home page
     When I visit page "ares/search"
       And I search ares for "PSYCH"
@@ -16,6 +17,7 @@ Feature: ares course reserves
 
   @www_ares_popup
   Scenario: Check the autofill function of the front page popup
+    Given PENDING : ares results not working
     Given I go to the home page
     When I enter "Permanent" in the ares search
       And I select the first option from the ares popup
@@ -23,6 +25,7 @@ Feature: ares course reserves
 
   @www_ares_sampler
   Scenario Outline: Search ares for reserves for popular courses
+    Given PENDING : ares results not working
     Given I visit page "ares/search"
       And I search ares for "<query>"
       And I wait for the ares spinner to stop
