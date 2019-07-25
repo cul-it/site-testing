@@ -104,6 +104,7 @@ Feature: Periodic Form Submissions To Track Emails
 
   @webform_periodic_submission @www.library.cornell.edu
   Scenario: Send a test email to the test form
+  Given PENDING : avoid
   Given I am testing domain "https://www.library.cornell.edu"
   Given I visit page "email-test-form"
     And I do not see complaints about javascript
