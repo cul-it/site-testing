@@ -549,17 +549,39 @@ end
 
 Then("I log in to newcatalog") do
   patiently do
+    # remove any cookies
+    expire_cookies
+
+    # go to the newcatalog login page
     target = "#{@url[:domain]}" + "/users/auth/saml"
     visit target
-    expect(page).to have_selector('#netid', :visible => :any)
+
+    # be sure we're at the CUWebAuth page
+    find(:css, '.input-submit')
+    expect(page.title).to eq('Cornell University Web Login')
+
+    #login with the ENV vars
     fill_in "netid", with: ENV["NETID"]
     fill_in "password", with: ENV["PASS"]
     click_button("Login")
+
+    # we should see the Two-Step login
+    page.find(:css, 'form#duo_form')
+    expect(page.find(:css, "#identity h1")).to have_content('Two-Step Login')
+
+    # send a Push to the user's phone
     page.driver.within_frame('duo_iframe') do
-      #print page.html
-      page.find(:css, "div.device-select-wrapper select").select("iphone x (xxx-xxx-8595)")
       click_button("Send Me a Push")
+      pause_for_user_input("Answer the phone for two-step verification")
+      sleep_for(10)
     end
+
+    # go to home page
+    visit(@url[:domain])
+
+    # should see log out option
+    expect(page.first(:css, "ul.blacklight-nav li a")).to have_content("Sign out")
+
   end
 end
 
