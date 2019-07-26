@@ -597,7 +597,7 @@ Then("I send a Push to my phone") do
       # sleep_for(6)
       # what_is(first(:xpath, '//button'))
       click_button("Send Me a Push")
-      pause_for_user_input("Answer the phone for two-step validation")
+      pause_for_user_input("Answer the phone for two-step verification")
       sleep_for(10)
     end
   end
