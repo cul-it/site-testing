@@ -31,3 +31,8 @@ Scenario: I should still be logged in after the first Scenario
   Then show me the cookies!
   Then I go to the home page
   Then I should be logged in to newcatalog
+
+@javascript
+@book_bags_login_test
+Scenario: I should be able to log in with one command
+  Given I log in to newcatalog
