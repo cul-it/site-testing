@@ -592,3 +592,16 @@ end
 Given /^I close my browser \(clearing the session\)$/ do
   expire_cookies
 end
+
+
+Then("I save the login") do
+  $cookie_session = get_me_the_cookie('_session_id')
+  $cookie_cuwltgttime = get_me_the_cookie('cuwltgttime')
+  puts $cookie_cuwltgttime.to_yaml
+end
+
+Then("I restore saved login") do
+  puts $cookie_cuwltgttime.to_yaml
+  create_cookie('_session_id', $cookie_session)
+  create_cookie('cuwltgttime', $cookie_cuwltgttime)
+end
