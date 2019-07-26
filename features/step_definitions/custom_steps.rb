@@ -536,6 +536,11 @@ end
 Then("I should see the Staff login link") do
   expect(page.first(:xpath, "//a[text()='Staff login']"))
 end
+
+Then("I should be logged in to newcatalog") do
+  expect(page.first(:css, "ul.blacklight-nav li a")).to have_content("Sign out")
+end
+
 Then /^show me the cookies!$/ do
   show_me_the_cookies
 end
