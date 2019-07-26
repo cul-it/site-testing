@@ -490,6 +490,10 @@ Then("show me id {string}") do |string|
   what_is(page.find_by_id(string, :visible => :all))
 end
 
+Then("show me xpath {string}") do |string|
+  what_is(page.find(:xpath, "#{string}"))
+end
+
 Then("test hashing") do
   puts getTestMark
   puts getTestMark("apple")
