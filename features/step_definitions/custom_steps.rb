@@ -541,6 +541,12 @@ Then("I should be logged in to newcatalog") do
   expect(page.first(:css, "ul.blacklight-nav li a")).to have_content("Sign out")
 end
 
+Then("I log in with NETID and PASS") do
+  fill_in "netid", with: ENV["NETID"]
+  fill_in "password", with: ENV["PASS"]
+  click_button("Login")
+end
+
 Then /^show me the cookies!$/ do
   show_me_the_cookies
 end
