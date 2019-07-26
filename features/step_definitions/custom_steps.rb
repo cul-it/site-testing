@@ -8,6 +8,9 @@ require 'capybara/cucumber'
 require 'webdrivers'
 require 'selenium-webdriver'
 
+require 'show_me_the_cookies'
+World(ShowMeTheCookies)
+
 Before do |scenario|
   @url = {:domain => getSiteURL}
   Capybara.app_host = @url[:domain]
