@@ -547,6 +547,21 @@ Then("I log in with NETID and PASS") do
   click_button("Login")
 end
 
+Then("I log in to newcatalog") do
+  patiently do
+    target = "#{@url[:domain]}" + "/users/auth/saml"
+    visit target
+    expect(page).to have_selector('#netid', :visible => :any)
+    fill_in "netid", with: ENV["NETID"]
+    fill_in "password", with: ENV["PASS"]
+    click_button("Login")
+    page.driver.within_frame('duo_iframe') do
+      #print page.html
+      page.find(:css, "div.device-select-wrapper select").select("iphone x (xxx-xxx-8595)")
+      click_button("Send Me a Push")
+    end
+  end
+end
 Then /^show me the cookies!$/ do
   show_me_the_cookies
 end
