@@ -59,6 +59,12 @@ def sleep_for(sec)
   sleep(sec.to_f)
 end
 
+def pause_for_user_input(message)
+  $stderr.write message
+  $stderr.write "\nPress enter to continue\n"
+  $stdin.gets
+end
+
 def click_js(link_text)
   js = "var link = document.evaluate('//a[contains(.,'" + link_text + "')], document, null, XPathResult.ANY_TYPE, null ); link.click();"
   what_is(js)
