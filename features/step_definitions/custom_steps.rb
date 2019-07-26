@@ -177,6 +177,13 @@ Then("I should see the CUWebLogin dialog") do
   expect(page.title).to eq('Cornell University Web Login')
 end
 
+Then("I should see the Two-Step Login dialog") do
+  wait_for(5) {
+    find(:css, 'form#duo_form')
+  }
+  expect(page.find(:css, "#identity h1")).to have_content('Two-Step Login')
+end
+
 Then /^show me the page$/ do
   wait_for(300) {
     print page.html
