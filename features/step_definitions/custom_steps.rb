@@ -562,6 +562,25 @@ Then("I log in to newcatalog") do
     end
   end
 end
+
+Then("I send a Push to my phone") do
+  patiently do
+    page.driver.within_frame('duo_iframe') do
+      #print page.html
+      #what_is(find(:xpath, '//select/option[@value="phone2"]'))
+      #find(:xpath, '//select/option[@value="phone2"]').trigger('click')
+      #find(:xpath, '//select[@name="device"]').select("iphone x \(xxx-xxx-8595\)")
+      #find(:css, "form#login-form.inline.login-form fieldset.device-selector div.device-select-wrapper", :visible => :any).select("iphone x (xxx-xxx-8595)")
+      #find(:xpath,"//button[text()='Send Me a Push']", :visible => :any).click
+      # sleep_for(6)
+      # what_is(first(:xpath, '//button'))
+      click_button("Send Me a Push")
+      pause_for_user_input("Answer the phone for two-step validation")
+      sleep_for(10)
+    end
+  end
+end
+
 Then /^show me the cookies!$/ do
   show_me_the_cookies
 end
