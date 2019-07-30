@@ -608,3 +608,49 @@ Then("I restore saved login") do
   create_cookie('_session_id', $cookie_session)
   create_cookie('cuwltgttime', $cookie_cuwltgttime)
 end
+
+
+Then("I should see the Book Bag link") do
+  patiently do
+    expect(page.find(:css, "#bookmarks_nav")).to have_content("Book Bag")
+  end
+end
+
+Then("I go to my Book Bag") do
+  patiently do
+    target = "#{@url[:domain]}" + "/book_bags/index"
+    visit "#{target}"
+  end
+end
+
+Then("I empty my Book Bag") do
+  click_link('Clear all items')
+end
+
+Then("I have an empty Book Bag") do
+  expect(page.first(:css, ".results-info p")).to have_content("You have no selected items.")
+end
+
+Then("I select the first {int} catalog results") do |int|
+  patiently do
+    page.assert_selector("input.toggle-bookmark", minimum: "#{int}")
+    @all_checkboxes = page.all(:css, "input.toggle-bookmark")
+  end
+  i = 0
+  while i < int
+    page.find(:xpath, @all_checkboxes[i].path).set(true)
+    i += 1
+  end
+end
+
+Then("there should be {int} items seleted") do |int|
+    expect(page.find(:xpath, '//span[@data-role="bookmark-counter"]').text).to match("#{int}")
+end
+
+Given("I view the catalog results") do
+  page.find_by_id("search-btn").click
+end
+
+Then("I remove the first Book Bag item") do
+  page.first("form.bookmark_toggle input.bookmark_remove").click
+end
