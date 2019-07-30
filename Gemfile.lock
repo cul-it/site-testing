@@ -106,6 +106,8 @@ GEM
     selenium-webdriver (3.6.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
+    show_me_the_cookies (5.0.0)
+      capybara (>= 2, < 4)
     tomlrb (1.2.5)
     webdrivers (3.2.1)
       nokogiri (~> 1.6)
@@ -133,8 +135,9 @@ DEPENDENCIES
   rubyzip
   selenium-cucumber
   selenium-webdriver
+  show_me_the_cookies
   spreewald!
   webdrivers (~> 3.0)
 
 BUNDLED WITH
-   1.16.1
+   1.17.3

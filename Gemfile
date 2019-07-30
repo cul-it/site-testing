@@ -14,3 +14,4 @@ gem 'rspec-expectations'
 gem 'cucumber_priority', :git => 'git@github.com:makandra/cucumber_priority.git'
 gem "spreewald", :git => 'git@github.com:makandra/spreewald.git'
 gem "chromedriver-helper"
+gem "show_me_the_cookies"

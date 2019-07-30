@@ -8,6 +8,9 @@ require 'capybara/cucumber'
 require 'webdrivers'
 require 'selenium-webdriver'
 
+require 'show_me_the_cookies'
+World(ShowMeTheCookies)
+
 Before do |scenario|
   @url = {:domain => getSiteURL}
   Capybara.app_host = @url[:domain]
@@ -54,6 +57,12 @@ end
 
 def sleep_for(sec)
   sleep(sec.to_f)
+end
+
+def pause_for_user_input(message)
+  $stderr.write message
+  $stderr.write "\nPress enter to continue\n"
+  $stdin.gets
 end
 
 def click_js(link_text)
@@ -166,6 +175,13 @@ Then("I should see the CUWebLogin dialog") do
     find(:css, '.input-submit')
   }
   expect(page.title).to eq('Cornell University Web Login')
+end
+
+Then("I should see the Two-Step Login dialog") do
+  wait_for(5) {
+    find(:css, 'form#duo_form')
+  }
+  expect(page.find(:css, "#identity h1")).to have_content('Two-Step Login')
 end
 
 Then /^show me the page$/ do
@@ -474,6 +490,10 @@ Then("show me id {string}") do |string|
   what_is(page.find_by_id(string, :visible => :all))
 end
 
+Then("show me xpath {string}") do |string|
+  what_is(page.find(:xpath, "#{string}"))
+end
+
 Then("test hashing") do
   puts getTestMark
   puts getTestMark("apple")
@@ -515,4 +535,122 @@ end
 
 Then("I should see the Staff login link") do
   expect(page.first(:xpath, "//a[text()='Staff login']"))
+end
+
+Then("I should be logged in to newcatalog") do
+  expect(page.first(:css, "ul.blacklight-nav li a")).to have_content("Sign out")
+end
+
+Then("I log in with NETID and PASS") do
+  fill_in "netid", with: ENV["NETID"]
+  fill_in "password", with: ENV["PASS"]
+  click_button("Login")
+end
+
+Then("I log in to the CUWebLogin page") do
+  patiently do
+    # remove any cookies
+    expire_cookies
+
+    # be sure we're at the CUWebAuth page
+    find(:css, '.input-submit')
+    expect(page.title).to eq('Cornell University Web Login')
+
+    #login with the ENV vars
+    fill_in "netid", with: ENV["NETID"]
+    fill_in "password", with: ENV["PASS"]
+    click_button("Login")
+
+    # we should see the Two-Step login
+    page.find(:css, 'form#duo_form')
+    expect(page.find(:css, "#identity h1")).to have_content('Two-Step Login')
+
+    # send a Push to the user's phone
+    page.driver.within_frame('duo_iframe') do
+      click_button("Send Me a Push")
+      pause_for_user_input("Answer the phone for two-step verification")
+      sleep_for(10)
+    end
+  end
+end
+
+Then("I send a Push to my phone") do
+  patiently do
+    page.driver.within_frame('duo_iframe') do
+      click_button("Send Me a Push")
+      pause_for_user_input("Answer the phone for two-step verification")
+      sleep_for(10)
+    end
+  end
+end
+
+Then /^show me the cookies!$/ do
+  show_me_the_cookies
+end
+
+Then /^show me the "([^"]*)" cookie$/ do |cookie_name|
+  show_me_the_cookie(cookie_name)
+end
+
+Given /^I close my browser \(clearing the session\)$/ do
+  expire_cookies
+end
+
+
+Then("I save the login") do
+  $cookie_session = get_me_the_cookie('_session_id')
+  $cookie_cuwltgttime = get_me_the_cookie('cuwltgttime')
+  puts $cookie_cuwltgttime.to_yaml
+end
+
+Then("I restore saved login") do
+  puts $cookie_cuwltgttime.to_yaml
+  create_cookie('_session_id', $cookie_session)
+  create_cookie('cuwltgttime', $cookie_cuwltgttime)
+end
+
+
+Then("I should see the Book Bag link") do
+  patiently do
+    expect(page.find(:css, "#bookmarks_nav")).to have_content("Book Bag")
+  end
+end
+
+Then("I go to my Book Bag") do
+  patiently do
+    target = "#{@url[:domain]}" + "/book_bags/index"
+    visit "#{target}"
+  end
+end
+
+Then("I empty my Book Bag") do
+  click_link('Clear all items')
+end
+
+Then("I have an empty Book Bag") do
+  expect(page.first(:css, ".results-info p")).to have_content("You have no selected items.")
+end
+
+Then("I select the first {int} catalog results") do |int|
+  patiently do
+    page.assert_selector("input.toggle-bookmark", minimum: "#{int}")
+    @all_checkboxes = page.all(:css, "input.toggle-bookmark")
+  end
+  i = 0
+  while i < int
+    page.find(:xpath, @all_checkboxes[i].path).set(true)
+    i += 1
+  end
+end
+
+Then("there should be {int} items seleted") do |int|
+    expect(page.find(:xpath, '//span[@data-role="bookmark-counter"]').text).to match("#{int}")
+end
+
+Given("I view the catalog results") do
+  page.find_by_id("search-btn").click
+end
+
+Then("I remove the first Book Bag item") do
+  page.first("form.bookmark_toggle input.bookmark_remove").click
 end
