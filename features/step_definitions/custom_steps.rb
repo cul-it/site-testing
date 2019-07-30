@@ -547,14 +547,10 @@ Then("I log in with NETID and PASS") do
   click_button("Login")
 end
 
-Then("I log in to newcatalog") do
+Then("I log in to the CUWebLogin page") do
   patiently do
     # remove any cookies
     expire_cookies
-
-    # go to the newcatalog login page
-    target = "#{@url[:domain]}" + "/users/auth/saml"
-    visit target
 
     # be sure we're at the CUWebAuth page
     find(:css, '.input-submit')
@@ -575,13 +571,6 @@ Then("I log in to newcatalog") do
       pause_for_user_input("Answer the phone for two-step verification")
       sleep_for(10)
     end
-
-    # go to home page
-    visit(@url[:domain])
-
-    # should see log out option
-    expect(page.first(:css, "ul.blacklight-nav li a")).to have_content("Sign out")
-
   end
 end
 
