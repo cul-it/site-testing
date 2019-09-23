@@ -8,7 +8,7 @@ Feature: Login Required Pages
   Scenario: My Account requires CUWebLogin
     Given I go to the home page
       And I click on the "My Account" menu item
-      And I click on the "Login with your NetID" link
+      And I click on the "Log in with your NetID" link
     Then I should see the CUWebLogin dialog
 
   @www_login_coap_contact
@@ -37,4 +37,4 @@ Feature: Login Required Pages
     Given I go to the home page
     Then I go to page "myacct"
     Then I wait for 1 sec
-    Then the page should show content "My Account"
+    Then the page should show content "MY ACCOUNT"

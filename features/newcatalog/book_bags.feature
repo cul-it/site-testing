@@ -6,6 +6,7 @@ Feature: Book Bags
   Background:
     Given I show the running environment
     Given I am testing the correct domain
+    Given PENDING : not totally interactive
 
 @javascript
 @book_bags_logged_in
@@ -37,7 +38,7 @@ Scenario: Items can be selected as bookmarks
   Given I go to the home page
   And I search the catalog for "satan is real"
   And I view the catalog results
-  And I select the first 3 catalog result
+  And I select the first 3 catalog results
 
 @javascript
 @book_bags_add_to_empty
