@@ -6,6 +6,7 @@ Feature: Book Bags
   Background:
     Given I show the running environment
     Given I am testing the correct domain
+    Given PENDING : not totally interactive
 
 @javascript
 @book_bags_logged_in
