@@ -69,4 +69,4 @@ Feature: Main Search
     | still-not-able-connect | Send to selected library |
     | summon-feedback | Submit |
     | reserves/textbook-request-form | Submit |
-    | about/collections/visual-resources/help | Submit |    
+    | about/collections/visual-resources/help | Submit |
