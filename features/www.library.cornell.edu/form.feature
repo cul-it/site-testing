@@ -65,8 +65,8 @@ Feature: Main Search
     | services/instruction/request | Submit |
     | research/consultation | Submit |
     | feedback | Send Mail |
-    | sparktalks/contact | Submit |
+    # | sparktalks/contact | Submit |
     | still-not-able-connect | Send to selected library |
     | summon-feedback | Submit |
     | reserves/textbook-request-form | Submit |
-    | about/collections/visual-resources/help | Submit |    
+    | about/collections/visual-resources/help | Submit |
