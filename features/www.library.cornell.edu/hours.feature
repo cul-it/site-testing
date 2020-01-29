@@ -27,10 +27,10 @@ Feature: Library Hours
       | Fine Arts Library | true | library |
       | Industrial and Labor Relations Library | true | library |
       | Kroch Library, Division of Asia Collections | true | library |
-      | Kroch Library, Division of Rare & Manuscript Collections | true | library |
+      | Kroch Library, Division of Rare & Manuscript Collections | true | Exhibition Gallery |
       | Law Library | true | Law Circulation |
       | Library Annex | true | library |
-      | Management Library | true | Circulation Desk |
+      | Management Library | true | Service Desk |
       | Mann Library | true | library-link |
       | Mathematics Library | true | library |
       | Medical Center Archives | false | false |
