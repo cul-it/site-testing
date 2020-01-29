@@ -10,6 +10,12 @@ bundle exec cucumber SITE=www.library.cornell.edu STAGE=prod HEADLESS=1 HEADLESS
 bundle exec cucumber SITE=www.library.cornell.edu STAGE=test HEADLESS=1 POLTERGEIST_DEBUG=1
 ```
 
+to run a test that has failed:
+
+```
+bundle exec cucumber SITE=www.library.cornell.edu STAGE=test HEADLESS=1 features/www.library.cornell.edu/hours.feature:30
+```
+
 Add new sites to site-testing.ini
 
 ### Arguments (default)
