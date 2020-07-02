@@ -71,3 +71,13 @@ Feature: Main Search
     # | summon-feedback | Submit |
     # | reserves/textbook-request-form | Submit |
     | about/collections/visual-resources/help | Submit |
+
+  @javascript
+  @www_forms_require_login
+  Scenario Outline: Some forms require login
+    Given I visit page "<formpage>"
+    Then I should see "<message>" within "div#block-login-tools-login-tools"
+
+  Examples:
+    | formpage | message |
+    | services/instruction/request | Cornell login required for access to form |
