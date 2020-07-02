@@ -7,8 +7,12 @@ require 'cucumber_priority'
 require 'spreewald/web_steps'
 require "selenium/webdriver"
 require 'webdrivers'
+require 'phantomjs'
 
-Phantomjs.path # Force install on require
+puts "\n********************* what is V\n"
+
+puts Phantomjs.path # Force install on require
+puts "\n********************* what is ^\n"
 
 def what_is(element)
   puts "\n********************* what is V\n"
