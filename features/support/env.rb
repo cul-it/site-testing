@@ -8,6 +8,8 @@ require 'spreewald/web_steps'
 require "selenium/webdriver"
 require "phantomjs"
 
+Phantomjs.path # Force install on require
+
 def what_is(element)
   puts "\n********************* what is V\n"
   puts element.inspect
