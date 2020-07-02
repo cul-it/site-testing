@@ -1,5 +1,6 @@
 require 'selenium-cucumber'
 require 'capybara/cucumber'
+require 'spreewald/web_steps'
 
 # Do Not Remove This File
 # Add your custom steps here
@@ -115,9 +116,13 @@ Given("I am testing domain {string}") do |string|
 end
 
 Given("I go to the home page") do
-  patiently do
-    visit(@url[:domain])
-  end
+#******************
+msg = ["****************** #{__method__}"]
+msg << @url.inspect
+msg << '******************'
+puts msg.to_yaml
+#*******************
+  visit @url[:domain]
 end
 
 Then /^I go to page "(.*?)"$/ do |sitepage|
