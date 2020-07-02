@@ -547,7 +547,9 @@ end
 
 Then /^I should see a Submit button labeled "(.*?)"$/ do |string|
   wait_for(5) {
-    expect(page.find(:css, "button.webform-submit")).to have_content(string)
+    patiently do
+      expect(page.find(:css, "button.webform-submit")).to have_content(string)
+    end
   }
 end
 
