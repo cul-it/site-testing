@@ -12,6 +12,9 @@ require 'phantomjs'
 puts "\n********************* what is V\n"
 
 puts Phantomjs.path # Force install on require
+Capybara.register_driver :poltergeist do |app|
+  Capybara::Poltergeist::Driver.new(app, :phantomjs => Phantomjs.path)
+end
 puts "\n********************* what is ^\n"
 
 def what_is(element)
