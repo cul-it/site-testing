@@ -6,7 +6,7 @@ require 'inifile'
 require 'cucumber_priority'
 require 'spreewald/web_steps'
 require "selenium/webdriver"
-require "phantomjs"
+require 'webdrivers'
 
 Phantomjs.path # Force install on require
 
