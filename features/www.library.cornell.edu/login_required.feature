@@ -36,6 +36,6 @@ Feature: Login Required Pages
   @www_test
   Scenario: I want to test
     Given I go to the home page
-    Then I go to page "myacct"
-    Then I wait for 1 sec
-    Then the page should show content "MY ACCOUNT"
+    And I click on the first "My Account" link
+    And I wait for 1 sec
+    Then "Log in with your NetID" should link to "/myaccount"
