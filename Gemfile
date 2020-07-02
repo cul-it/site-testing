@@ -4,8 +4,8 @@ gem "capybara"
 gem "capybara-selenium"
 gem "cucumber"
 gem "inifile"
-gem 'phantomjs', '~> 2.1', '>= 2.1.1.0', :require => 'phantomjs/poltergeist'
 gem "poltergeist"
+gem 'phantomjs', :require => 'phantomjs/poltergeist'
 gem "rubyzip"
 gem "selenium-cucumber"
 gem "selenium-webdriver"
