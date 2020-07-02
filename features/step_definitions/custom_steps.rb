@@ -335,6 +335,34 @@ Then("I should see the hours listing for {string} with {string}") do |string, st
   end
 end
 
+Given("I should see {string} library is closed") do |string|
+  patiently do
+    within(page.find(:xpath,"//a/h2[text()='#{string}']").find(:xpath, '../../..')) {
+      expect(find("span.library-closed")).to have_content("Closed")
+    }
+  end
+end
+
+Then("I should see the closed lozenge") do
+  expect(page.find("span.library-closed")).to have_content("Closed")
+end
+
+Given("I should see {string} library has a {string} link") do |string, string2|
+  patiently do
+    within(page.find(:xpath,"//a/h2[text()='#{string}']").find(:xpath, '../../..')) {
+      expect(find("div.today-hours")).to have_link(string2)
+    }
+  end
+end
+
+Then("I should see a {string} link") do |string|
+  expect(page).to have_link(string)
+end
+
+Then("I should see the {string} LibCal hours table") do | string |
+  expect(page.find("table.s-lc-whw")).to have_content(string)
+end
+
 Then("I should see the table of {string} hours with row {string}") do |string, string2|
   case string2
   when 'false'
