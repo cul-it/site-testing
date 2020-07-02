@@ -4,6 +4,7 @@ Feature: Test for basic site function
     Given I show the running environment
     And I am testing the correct domain
 
+  @javascript
   @formtest_js
   Scenario: The web site is up and representing for all-sites
     And I am testing the correct domain
