@@ -42,9 +42,11 @@ Feature: Main Search
       | infodesk_med | Weill Cornell Medical Library (New York City |
       | askalibrarian_qatar_med | Weill Cornell Medical College-Qatar, Distributed eLibrary |
 
+  @javascript
   @www_forms_available
   Scenario Outline: Assure that each of the public webforms are available to users
     Given I visit page "<formpage>"
+    Then show me the page
     Then I should see a Submit button labeled "<label>"
 
   Examples:
