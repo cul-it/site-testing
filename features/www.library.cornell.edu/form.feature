@@ -64,11 +64,10 @@ Feature: Main Search
     | services/borrow/library-card | Submit |
     # | about/news/library-insider/recommendation | Submit |
     # | help/trouble-connecting/onsite | Submit |
-    | services/instruction/request | Submit |
     | research/consultation | Submit |
     | feedback | Send Mail |
     # | sparktalks/contact | Submit |
     | still-not-able-connect | Send to selected library |
-    | summon-feedback | Submit |
-    | reserves/textbook-request-form | Submit |
+    # | summon-feedback | Submit |
+    # | reserves/textbook-request-form | Submit |
     | about/collections/visual-resources/help | Submit |
