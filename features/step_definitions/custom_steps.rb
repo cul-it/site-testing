@@ -116,12 +116,6 @@ Given("I am testing domain {string}") do |string|
 end
 
 Given("I go to the home page") do
-#******************
-msg = ["****************** #{__method__}"]
-msg << @url.inspect
-msg << '******************'
-puts msg.to_yaml
-#*******************
   visit @url[:domain]
 end
 
