@@ -28,13 +28,14 @@ Feature: Login Required Pages
       And I click on the "About Us" menu item
       And I click on the "subject librarians" link
       And I click on the "Cornell Open Access Publication Fund" link
-      And I click on the "COAP Application for Funding" link
-      And I click on the "Login" link
-    Then I should see the CUWebLogin dialog
+      Then I should see "Cornell University Library's open access publishing grants program is closed" within "div.alert"
+    #   And I click on the "COAP Application for Funding" link
+    #   And I click on the "Login" link
+    # Then I should see the CUWebLogin dialog
 
   @www_test
   Scenario: I want to test
     Given I go to the home page
-    Then I go to page "myacct"
-    Then I wait for 1 sec
-    Then the page should show content "MY ACCOUNT"
+    And I click on the first "My Account" link
+    And I wait for 1 sec
+    Then "Log in with your NetID" should link to "/myaccount"
