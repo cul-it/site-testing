@@ -474,7 +474,6 @@ Then("I log in with SAML") do
     fill_in "password", with: ENV["PASS"]
     click_button("Login")
     page.driver.within_frame('duo_iframe') do
-      print page.html
       page.find(:css, "div.device-select-wrapper select").select("Android (xxx-xxx-8595)")
       click_button("Send Me a Push")
     end
