@@ -7,7 +7,7 @@ Feature: Library Hours
   @www_hours_find
   Scenario: Hours page available
     Given I go to the home page
-      And I click on the first 'Libraries and Hours' link
+    And I click on the first 'Libraries and Hours' link
     Then the page title should start with "Libraries and Hours"
 
   # @www_hours_libraries_listing
@@ -56,12 +56,12 @@ Feature: Library Hours
     | Africana Library |
     | Engineering Library |
     | Fine Arts Library |
-    | Industrial and Labor Relations Library |
+    # | Industrial and Labor Relations Library |
     | Kroch Library, Division of Asia Collections |
     | Kroch Library, Division of Rare & Manuscript Collections |
-    | Law Library |
+    # | Law Library |
     | Library Annex |
-    | Management Library |
+    # | Management Library |
     | Mann Library |
     | Mathematics Library |
     # | Medical Center Archives |
@@ -71,7 +71,7 @@ Feature: Library Hours
     | Physical Sciences Library (Edna McConnell Clark Library) |
     | School of Hotel Administration Library |
     | Uris Library |
-    | Veterinary Library |
+    # | Veterinary Library |
 
   @www_hours_libraries_covid_pickup
   Scenario Outline: All libraries closed
@@ -85,8 +85,8 @@ Feature: Library Hours
 
   Examples:
     | library | link |
-    | Library Annex | Request/pickup service available |
-    | Mann Library | Request/pickup service available |
+    # | Library Annex | Request/pickup service available |
+    | Mann Library | Closed except for academic classes |
     | Uris Library | Request/pickup service available |
     | Kroch Library, Division of Asia Collections | Request/pickup service available |
     | Olin Library | Request/pickup service available |
