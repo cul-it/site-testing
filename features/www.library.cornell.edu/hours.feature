@@ -56,12 +56,12 @@ Feature: Library Hours
     | Africana Library |
     | Engineering Library |
     | Fine Arts Library |
-    | Industrial and Labor Relations Library |
+    # | Industrial and Labor Relations Library |
     | Kroch Library, Division of Asia Collections |
     | Kroch Library, Division of Rare & Manuscript Collections |
-    | Law Library |
+    # | Law Library |
     | Library Annex |
-    | Management Library |
+    # | Management Library |
     | Mann Library |
     | Mathematics Library |
     # | Medical Center Archives |
@@ -71,7 +71,7 @@ Feature: Library Hours
     | Physical Sciences Library (Edna McConnell Clark Library) |
     | School of Hotel Administration Library |
     | Uris Library |
-    | Veterinary Library |
+    # | Veterinary Library |
 
   @www_hours_libraries_covid_pickup
   Scenario Outline: All libraries closed
