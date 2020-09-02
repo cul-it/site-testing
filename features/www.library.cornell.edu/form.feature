@@ -46,7 +46,6 @@ Feature: Main Search
   @www_forms_available
   Scenario Outline: Assure that each of the public webforms are available to users
     Given I visit page "<formpage>"
-    Then show me the page
     Then I should see a Submit button labeled "<label>"
 
   Examples:
