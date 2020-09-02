@@ -85,8 +85,8 @@ Feature: Library Hours
 
   Examples:
     | library | link |
-    | Library Annex | Request/pickup service available |
     | Mann Library | Request/pickup service available |
+    # | Library Annex | Request/pickup service available |
     | Uris Library | Request/pickup service available |
     | Kroch Library, Division of Asia Collections | Request/pickup service available |
     | Olin Library | Request/pickup service available |
