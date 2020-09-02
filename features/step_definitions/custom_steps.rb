@@ -135,7 +135,8 @@ end
 
 Then("I click on the first {string} link") do |string|
   wait_for(300) {
-    page.first('a', text: /#{string}?/i).click()
+    item = page.first('a', text: /#{string}?/i)
+    item.click()
    }
 end
 
