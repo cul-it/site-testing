@@ -7,7 +7,7 @@ Feature: Library Hours
   @www_hours_find
   Scenario: Hours page available
     Given I go to the home page
-      And I click on the first 'Libraries and Hours' link
+    And I click on the first 'Libraries and Hours' link
     Then the page title should start with "Libraries and Hours"
 
   # @www_hours_libraries_listing
