@@ -17,5 +17,7 @@ gem "chromedriver-helper"
 gem "show_me_the_cookies"
 
 gem "rack", ">= 2.1.4"
+gem "nokogiri", ">= 1.11.0.rc4"
+
 
 
