@@ -6,3 +6,4 @@ capybara-*.html
 test.html
 *.png
 .env
+/vendor
