@@ -16,8 +16,8 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.5.2)
-      public_suffix (>= 2.0.2, < 4.0)
+    addressable (2.8.0)
+      public_suffix (>= 2.0.2, < 5.0)
     appium_lib (9.7.2)
       awesome_print (~> 1.8)
       json (>= 1.8)
@@ -78,7 +78,7 @@ GEM
       capybara (~> 2.1)
       cliver (~> 0.3.1)
       websocket-driver (>= 0.2.0)
-    public_suffix (3.0.0)
+    public_suffix (4.0.6)
     racc (1.5.2)
     rack (2.2.3)
     rack-test (0.7.0)
