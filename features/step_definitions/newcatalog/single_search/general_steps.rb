@@ -22,16 +22,16 @@
 # end
 
 Then /^I absolutely should see the text '(.*?)'$/i do |text|
-  page.should have_content(text)
+  expect(page).to have_content(text)
 end
 
 Then(/^I should see the text "([^"]*)"$/) do |arg1|
-   page.should have_content(arg1)
+   expect(page).to have_content(arg1)
 end
 
 Then("I should see any text {string}") do |string|
    # // case insensitive
-   page.should have_content(/#{string}/i)
+   expect(page).to have_content(/#{string}/i)
 end
 
 

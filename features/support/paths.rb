@@ -50,6 +50,12 @@ module NavigationHelpers
     when /the single search results page/
       search_index_path
 
+    when /hotel-horizons-access/
+      'hotel-horizons-access/index.php'
+
+    when /web-services/
+      @url[:domain]
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
