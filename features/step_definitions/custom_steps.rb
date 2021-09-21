@@ -119,12 +119,12 @@ Given("I go to the home page") do
   visit @url[:domain]
 end
 
-Then /^I go to page "(.*?)"$/ do |sitepage|
-  wait_for(20) {
-    target = "#{@url[:domain]}" + "/#{sitepage}"
-    visit "#{target}"
-  }
-end
+# Then /^I go to page "(.*?)"$/ do |sitepage|
+#   wait_for(20) {
+#     target = "#{@url[:domain]}" + "/#{sitepage}"
+#     visit "#{target}"
+#   }
+# end
 
 Then("I click on the {string} link") do |string|
   wait_for(300) {
