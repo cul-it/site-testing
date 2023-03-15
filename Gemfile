@@ -16,8 +16,8 @@ gem "spreewald", :git => 'git@github.com:makandra/spreewald.git'
 gem "chromedriver-helper"
 gem "show_me_the_cookies"
 
-gem "rack", ">= 2.1.4"
-gem "nokogiri", ">= 1.11.4"
+gem "rack", ">= 2.2.6"
+gem "nokogiri", ">= 1.13"
 
 
 
