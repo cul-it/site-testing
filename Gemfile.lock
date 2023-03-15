@@ -100,7 +100,7 @@ GEM
       websocket-driver (>= 0.2.0)
     public_suffix (4.0.6)
     racc (1.6.2)
-    rack (2.2.6.2)
+    rack (2.2.6.4)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     regexp_parser (2.2.1)
@@ -152,10 +152,10 @@ DEPENDENCIES
   cucumber
   cucumber_priority!
   inifile
-  nokogiri (>= 1.11.4)
+  nokogiri (>= 1.13)
   phantomjs
   poltergeist
-  rack (>= 2.1.4)
+  rack (>= 2.2.6)
   rspec-expectations
   rubyzip
   selenium-cucumber
